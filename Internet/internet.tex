@@ -1,0 +1,346 @@
+\documentclass[12pt, a4paper]{article}
+
+\title{Internet}
+\date{}
+
+
+\usepackage[margin=1in]{geometry}  % set the margins to 1in on all sides
+\usepackage{graphicx}              % to include figures
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{wrapfig}			   % for images formatting
+\usepackage{booktabs}
+\usepackage{caption}			   % for labeling images
+\usepackage{bigints}			   % for bigger integral symbols	
+\usepackage{subcaption}			   % subfigures functions
+
+% various theorems, numbered by section
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+
+\DeclareMathOperator{\id}{id}
+
+\newcommand{\bd}[1]{\mathbf{#1}}  % for bolding symbols
+\newcommand{\RR}{\mathbb{R}}      % for Real numbers
+\newcommand{\ZZ}{\mathbb{Z}}      % for Integers
+\newcommand{\col}[1]{\left[\begin{matrix} #1 \end{matrix} \right]}
+\newcommand{\comb}[2]{\binom{#1^2 + #2^2}{#1+#2}}
+
+\begin{document}
+	\maketitle
+	
+	\section*{4.0 Switch}
+	
+	Opera a livello della TCP/IP \\
+	\begin{center}
+		\begin{tabular}{||c | c||} 
+			\hline
+			\textbf{Task} & \textbf{IOS Command}  \\ [1ex] 
+			\hline\hline
+			Enter global configuration mode & S1\# \textbf{configure terminal}  \\  [1ex]
+			\hline
+			Enter interface configuration mode & S1(config)\# \textbf{interface FastEthernet 0/1} \\ [1ex]
+			\hline
+			Configure the interface duplex & S1(config-if)\# \textbf{duplex full} \\ [1ex]
+			\hline
+			Configure the interface speed & S1(config-if)\# \textbf{speed 100} \\ [1ex]
+			\hline
+			Return to privileged EXEC mode & S1(config-if)\# \textbf{end} \\ [1ex]  
+			\hline
+			Save the running config to the startup config & S1\# \textbf{save running-config startup-config} \\ [1ex]
+			\hline
+		\end{tabular}
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{ ||p{8cm}||p{8cm}|| }
+			\hline
+			\multicolumn{2}{|c|}{Switch Verification Commands} \\ [0.5ex]
+			\hline\hline
+			\textbf{Task} & \textbf{IOS Command} \\
+			\hline\hline 
+			Display interface status and configuration & S1\# \textbf{show startup-config} \\
+			\hline
+			Display current running configuration & S1\# \textbf{show running-config} \\
+			\hline
+			Display information about flash file system & S1\# \textbf{show flash} \\
+			\hline
+			Display system hardware and software status & S1\# \textbf{show version} \\
+			\hline
+			Display history of command entered & S1\# \textbf{show history} \\
+			\hline
+			Display IP information about an interface & S1\# \textbf{show ip interface} [interface-id]\\
+			& S1\# \textbf{show ipv6 interface} [interface-id] \\
+			\hline
+			Display the MAC address table & S1\# \textbf{show mac-address-table} \\
+			& S1\# \textbf{show mac address-table} \\
+			\hline\hline
+		\end{tabular}
+	\end{center}
+	
+	\subsection*{Switching in Networking}
+	In ogni porta sono associati due termini, uno di ingresso (\textbf{Ingress}) ed uno di uscita (\textbf{Exgress}). \\ 
+	Uno switch usa la sua tavola degli indirizzi MAC per inidirzzare i payloads. \\
+	Uno switch ha un processo a due passaggi:
+	\begin{itemize}
+		\item 1. Learn: esamina l'indirizzo in ingresso e ne aggiunge l'indirizzo MAC se non è nella tavola e resetta il time out a 5 minuti se la fonte è nella tavola
+		\item 2. Forward: esamina l'indirizzo della destinazione, se essa ha un indirizzo MAC registrato nella tavola, indirizza i dati alla porta specifica, se invece l'indirizzo \textit{non} è nella tavola, tutte le interfacce vengono interrogate eccetto la porta della fonte.
+	\end{itemize}
+
+	\subsection*{Metodi di Switch Forwarding}
+	Gli switch utilizzano dei software su applicazioni specifiche integrate (ASICs - application-specific-integrated-circuit) per prendere decisioni veloci. \\
+	Uno switch utilizza uno dei due metodi per fare forwarding decisions dopo che riceve un frame:
+	\begin{itemize}
+		\item \textbf{Store-and-forward switching} - riceve l'intero frame e si assicura che sia valido (utilizzato molto in Cisco).
+		\item \textbf{Cut-through switching} - reindirizza il frame immediatamente dopo aver determinato l'indirizzo MAC della destinazione di un frame in arrivo e della porta in uscita.
+	\end{itemize} 
+	BER = Bit Error Rate = $\frac{1}{x}$, \quad (Ethernet) \quad, BER $\cong 10^{-12}$ \\
+	
+	\subsection*{Domini di Collisione}
+	
+	Gli switches eliminano i \textit{domini di collisione} e riducono la \textit{congestione}
+	\\ Duplex = quando due dispositivi comunicano in contemporanea, creando una collisione \\
+	Quando esiste una duplex completa sul collegamento, i domini di collisione vengono eliminati. \\
+	Se esistono uno o più dispositivi in \textit{half-duplex} ci sarà (...)
+	
+	\subsection*{Broadcast Domains}
+	
+	Si estende attraverso tutti i dispositivi di Layer 1 o i Layer 2 della LAN.
+	
+	\section*{4.1 VLANs}
+	
+	Le VLAN sono connessione logiche con dispositivi simili. Mettere vari dispositivi in varie VLANs ha le seguenti caratteristiche: 
+	\begin{itemize}
+		\item Permette la segmentazione dei vari gruppi di dispositivi sugli stessi switches
+		\item Permette un'organizzazione più gestibile:
+		\begin{itemize}
+			\item Broadcasts, multicasts e unicasts sono isolati nelle VLAN individuali
+			\item Ogni VLAN ha il suo univoco range di \textit{IP addressing}
+		\end{itemize}
+	\end{itemize}
+
+	I benefici di usare le VLAN sono:
+	\begin{itemize}
+		\item \textbf{Domini di broadcast ridotti}: Dividere le LAN riduce il numero di domini di broadcast
+		\item \textbf{Sicurezza migliorata}: Solo gli utenti nelle stesse VLAN possono comunicare tra loro
+		\item \textbf{Efficienza IT migliorata}: Le VLAN possono raggruppare dispositivi con specifiche simili
+		\item \textbf{Costi ridotti}: Un singolo switch può supportare multipli gruppi o VLANs
+		\item \textbf{Performance migliori}: Piccoli domini di Broadcast riducono il traffico migliorando la larghezza di banda
+		\item \textbf{Gestione semplificata}: Gruppi simili avranno bisogno di applicazioni simili 
+	\end{itemize}
+
+
+	\subsection*{4.2 VLAN Definitions}
+
+	Inter-VLAN Routing
+	\begin{itemize}
+		\item Legacy Inter-VLAN routing - Legacy, non ha un buon scaling
+		\item Router-on-a-stick 
+		\item Layer 3 switch using switched virtual interfaces (SVI)
+	\end{itemize}	
+	
+	\subsection*{Trunking}
+	Fondamentale nelle architetture VLAN
+	
+	
+	
+	\section*{Modulo 14: Routing Concepts}
+	
+	L'instradamento è l'operazione per cui il router decide dove inoltrare un pacchetto. Ogni volta che un router, da qualsiasi delle sue interfacce, riceve un pacchetto, performa un'operazione di \textit{routing} per capire dove inoltrare il pacchetto. Ha quindi due funzioni importanti: decide dove deve andare il pacchetto, e poi lo manda a destinazione. \\
+	La \textbf{Routing Table} è una struttura composte di righe che ci informano su delle determinate destinazioni, ed eventuali salti da effettuare per raggiungerle (collegamento diretto altrimenti). Il \textit{longest match} indica, usando i bit più significativi, quante destinazioni hanno un numero simile di bit significativi (?). \\\\
+	Due tipi di reti:
+	\begin{itemize}
+		\item Directly Connected Networks
+		\item Remote Networks: Reti che non sono direttamente connesse al router
+	\end{itemize}
+	
+	
+	\subsection*{14.2 Packet Forwarding}
+	
+	Il primo passo per il router è ricevere un pacchetto sulla sua interfaccia, ovvero ricevere un qualsiasi frame (es. frame ethernet). Il passo successivo è quello di estrarre l'indirizzo di destinazione del pacchetto IP. Dopodiché l'indirizzo verrà preso e confrontato con tutte le entries della Routing Table, il match migliore (ovvero il destinatario connesso direttamente al router per esempio) verrà preso in considerazione (?). 5. Il router non ha ricevuto nessun match, allora il pacchetto verrà scartato (da riscrivere kek). \\ \\
+	Tree meccanismi di Packet Forwarding:
+	\begin{itemize}
+		\item \textbf{Process Switching} ....
+		\item \textbf{Fast Switching}: ....
+		\item \textbf{Cisco Express Forwarding $($CEF$)$}: .....
+	\end{itemize}
+	
+	\subsection*{Routing Table Principes}
+	// TODO: Camera roll picture // \\ \\
+	
+	\subsection*{Route Sources}
+	Una routing table contiene una lista di routes alle reti conosciute, derivate dalle seguenti:
+	\begin{itemize}
+		\item Directly Connected networks
+		\item Static routes
+		\item Dynamic routing protocols
+	\end{itemize}
+
+	La sorgente per ogni route è identificata da un codice. Alcuni codici comuni sono:
+	\begin{itemize}
+		\item L - local
+		\item C - connected
+		\item S - static
+		\item O - OSPF (Open Shortest Path Next)
+		\item * - default route(?)
+	\end{itemize}
+
+	// TODO Ipv4, Ipv6, Image Legend // \\ \\
+	
+	// Administrative Distance // \\ \\
+	
+	
+	\subsection*{14.3 }
+	
+	// Static or Dynamic? // \\ \\
+	
+	Il Route dinamico è generalmente meno sicuro di quello statico, poiché nel primo caso è più facile potersi mettere in ascolto.  \\
+	
+	\subsection*{Dynamic Routinc Protocol Concepts} 
+	Ci sono due approcci per implementare algoritmi di routing:
+	\begin{itemize}
+		\item \textbf{Distance Vector}: tutti i router condividono con i vicini la distanza che hanno calcolato dalle altre reti, dopodiché aggiungono il costo che vedono dal router dal quale ahnno ricevuto le informazioni (semplice ma presenta problemi di convergenza)
+		\item \textbf{Link State}: tutti i router diffondono le informazioni riguardanti le reti direttamente connesse agli altri router (ciascuno condivide la propria routing table), tutti i router costruiscono l'intera topologia (complesso ma più veloce)
+	\end{itemize}
+	Questi algoritmi sono stati sviluppati e diffusi a partire dal 1990 circa (subendo lievi modifiche nel tempo, mantenendo però la logica di base). \\
+	Un'algoritmo di routing calcola continuamente i percorsi ``migliori'' per indirizzare i frame, ciascun protocollo ha la sua definizione di ``percorso migliore''. \\ \\
+	Il \textbf{Load Balancing} è una strategia che permette di bilanciare il traffico tra due o più destinazioni differenti, dipende dalla configurazione del router. Non sempre il balancing è equo e le percentuali possono essere distribuite diversamente.
+	
+	
+	
+	\section*{Module 15: IP Static Routing}
+	
+	\subsection*{Static Routes}
+	\begin{itemize}
+		\item Standard static route
+		\item Default static route
+		\item Floating static route
+		\item \textbf{Summary static route}: si usa quando abbiamo più reti, facciamo una summary e la mettiamo a /22 (?), quindi in un qualche modo fa un sommario di route più piccole che si possono raggruppare tutte assieme [non importante nel corso]
+	\end{itemize}
+
+	\subsection*{Next-Hop Options}
+	
+	\begin{itemize}
+		\item Next-Hop Route: viene specificato solo l'indirizzo IP di next-hop
+		\item Directly connected static route: (...)
+		\item Fully sepcified static route: specificata in maniera completa
+	\end{itemize}
+
+	// TODO: Dual-Stack Topology // \\ \\
+	
+	Abbiamo 3 route remote, una /24 [IPv4], l'altra /64 [IPv6], configurando il router R1 si può verificare che il router riconosce immediatamente le route connesse ( verificabile con \textbf{show ip route $|$ begin Gateway} ), di conseguenza verificando nella route table si può verificare che la rete in R2 è connessa mediante l'interfaccia seriale \textbf{Serial0/1/0}, tuttavia non può comunicare direttamente con la LAN di R3.
+	
+	
+	\subsection*{15.2 Configure IP Static Routes}
+	
+	In una \textbf{next-hop static route}, solo il \textit{next-hop IP address} viene specificato, per esempio nella topologia di prima, R1 dovrà avere 3 next-hop settati manualmente ( usando il comando \textbf{ip route [IPv4] [Subnet Mask]} ). Discorso analogo può esser fatto nel protocollo IPv6, ovviamente l'unica differenza sarà il formato. \\
+	\\
+	Una \textbf{fully specified static route} necessita invece di avere l'interfaccia ed il next-hop specificati ( \textbf{ip route [IPv4 Address] [Subnet Mask] [Interfaccia] [IP Next-Hop]} ). Nel caso del protocollo IPv6 invece, non solo l'interfaccia avrà un indirizzo GUA, ma anche un LLA (IPv6 Link-local Address), di conseguenza nella configurazione andranno specificati entrambi ( \textbf{ipv6 route [IPv6 Address/Subnet Mask] [Exit Interface] [Next-Hop]} ). \\
+	Per verificare una route statica si può andare nella route table ( show ip route static ) e vedere se l'interfaccia ha una S sulla sinistra.
+	
+	
+	\subsection*{15.3 Floating Static Routes}
+	
+	Sono path di backup ed entrano in gioco quando le route principali non sono disponibili. Di prassi si mette una distanza di 5, ma è sufficiente che sia un valore maggiore di 1. La distanza amministrativa si può impostare dal comando ``ip route'', aggiungendola come argomento finale.
+	
+	
+	\subsection*{15.4 Configure Static Host Routes}
+	
+	Si può configurare per dirigere il traffico ad una destinazione specifica. Utilizza un indirizzo IP e una subnet di 255.255.255.255 (/32) nei protocolli IPv4 ed una prefix length di /128 nei protocolli IPv6.
+	
+	
+	
+	\section*{Modulo 1: Single-Area OSPFv2 Concepts}
+	
+	\subsection*{1.1 OSPF Features and Characteristics}
+	
+	OSPF appartiene ad una categoria \textbf{link-state routing protocol}. Link si riferisce a tutti i collegamenti a coppie di router ( seriali o link-access ). Ciascuno di questi sara una rete logica di tipo /n. L'obiettivo dell'OSPF è di far sapere al router lo stato del link a cui è direttamente connesso. Ogni collegamento tra router è un $<<$link$>>$ per OSPF. \\
+	I router che utilizzano OSPF utilizzano 5 tipologie di messaggi per garantire lo scambio di informazioni di routing:
+	\begin{itemize}
+		\item \textbf{Hello Packet}
+		\item \textbf{Database description packet}
+		\item \textbf{Link-state request packet}
+		\item \textbf{Link-state update packet}
+		\item \textbf{Link-state acknowledgment packet}
+	\end{itemize}
+	
+	I messaggi di OSPF vengono usati per creare e mantenere 3 database OSPF:
+	\begin{itemize}
+		\item Adjacency Database: (...)
+		\item Link-State Database (LSDB): (...)
+		\item Forwarding Database: (...)
+	\end{itemize}
+
+	Queste tabelle sono di fatto ``vive'', quindi ogni volta che la tabella viene aggiornata, viene ricalcolata la topologia mediante un'algoritmo. In realtà quest'algoritmo è solo una parte dell'algoritmo \textbf{SPF} (Shortest-Path First) che calcola le route più ottimali possibili per ogni nodo. \\ \\
+	OSPF si può implementare in due modi:
+	\begin{itemize}
+		\item Single area OSPF
+		\item Multiarea OSPF
+	\end{itemize} 
+	La seconda presenta routing tables più piccole, un ridotto aggiornamento del link-state ed una ridotta frequensza di calcoli riguardanti l'algoritmo SPF. 
+	\\ \\
+	OPSFv3 è l'equivalente di OSPFv2 implementato però per i protocolli IPv6.
+	
+	\subsection*{1.2 OSPF Packets}
+	\subsection*{Hello Packet}
+	OPSF Type 1 Packet corrisponde all'Hello Packet, che hanno lo scopo di trovare i vicini e stabilirne l'adiacenza
+	\subsection*{Link-State Updates}
+	Inviano aggiornamenti sul routing OSPF. Un paccketto LSU può contenere diverse tipologie di advertisement (...?)
+	
+	
+	\subsection*{1.3 OSPF Operation}
+
+	Ci sono 7 stati attraversati da un router nei quali opera l'OSPF.
+	\begin{itemize}
+		\item Down State: il router non riceve Hello Packets, di conseguenza l'interfaccia non sta funzionando, quindi va in Init State
+		\item Init State: l'Hello Packet viene ricevuto dal vicino e contiene il Router ID del mandante, passa poi al Two-Way State
+		\item Two-Way State: (...)
+		\item ExStart State: (...)
+		\item Exchange State: i router decidono chi passerà le informazioni sul DBD (DataBase Description), mediante un algoritmo si decide chi inizia e chi ascolta, dopodiché si avrà la fase vera e propria dello scambio delle DBD, se sono richieste ulteriori informazioni si passa in Loading State, altrimenti transiziona al Full State
+		\item Loading State: LSR e LSU vengono usate per ottenere ulteriori informazioni di route
+		\item Full State: (...) Porcaccio dio
+	\end{itemize}
+
+	\subsection*{The need for a DR}
+	// TODO Immagine e sistemare paragrafo// \\
+	Numero di Adiacenze: $ n(n - 1) / 2 $ \\
+	n = numero di routers \\
+	
+	
+	
+	\section*{Dijkstra and Bellman-Ford algorithms}
+
+	\subsection*{Components of OSPF}
+	
+	Il router costruisce la routing table dalla topology table basata sulla Dijkstra SPF (shortest-path-first). SPF è un agoritmo basato sul costo cumulativo per raggiungere una destinazione. L'SPF crea un'albero piazzando ogni router alla radice e caclolandone il shortest-path ad ogni nodo. 
+	
+	\subsection*{Bellman-Ford Algorithm}
+	
+	Calcola il costo più basso per raggiungere una destinazione, tuttavia permette di poter scegliere una strada piuttosto che un'altra ( in caso di percorsi con costo uguale ). \\ Bellman-Ford ha una complessità computazionale maggiore rispetto a Dijkstra, perciò generalmente si preferisce il secondo rispetto al primo.
+	
+	
+	
+	\section*{Modulo 2: Single-Area OSPFv2 Configuration}
+	
+	\subsection*{Router IDs}
+	
+	Un router ID OSPF è un valore a 32-bit, rappresentato in forma di indirizzo IPv4. Viene usato unicamente per definire il router. (...)
+	
+	I router derivano il router ID in base a 3 criteri:
+	\begin{itemize}
+		\item 1. L'ID viene configurato direttamente usando il comando OSPF ``router-id rid'' router configuration mode.
+		\item 2. Il router sceglie l'indirizzo IPv4 più grande (...)
+		\item 3. Il router sceglie l'indirizzo IPv4 (...)
+	\end{itemize}
+	
+	\subsection*{Wildcard Mask}
+	
+	Rappresenta l'inverso della Subnet Mask e rappresenta il numero di host.
+	
+	
+\end{document}
