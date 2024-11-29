@@ -344,9 +344,20 @@
 	
 	
 	\section*{Modulo 3.7: TCP and UDP Vulnerabilities}
-	
-	\subsection*{TCP}
-	TCP instaura una connessione affidabile, garantendo che i pacchetti arrivino a destinazione. 
+	// Risistemare tutto il paragrafo //
+	\subsection*{TCP Attacks}
+	TCP instaura una connessione affidabile, garantendo che i pacchetti arrivino a destinazione. \\
+	\subsection*{TCP SYN Flood Attack}
+	L'attaccante fa leva sul fatto che il protocollo debba attendere un'ACK per sincronizzarsi, lasciando però di fatto il SYN in sospeso, creando un disservizio ed impedendo ad altre connessioni di accedere al servizio. \\
+	Per terminare una sessione TCP si usano degli exchange a 4 steps:
+	\begin{itemize}
+		\item Quando il client non ha più dati da mandare in stream, manda un segmento con la flag FIN attiva
+		\item Il server manda un ACK per notificare l'arrivo del pacchetto (...)
+		\item (...)
+		\item (...)
+	\end{itemize}
+
+
 	
 	
 \end{document}
