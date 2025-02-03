@@ -593,7 +593,8 @@
 		\end{wrapfigure}
 		
 		Overall, the charge does not distribute evenly over the Surface of a Conductor. \\
-		Eventhough there's a direct relationship between the field $\vec{E}$ and the (surface) Charge Density $\sigma$.\\
+	
+		Eventhough there's a direct relationship between the field $\vec{E}$ and the (surface) Charge Density $\sigma$ $[ C/m^2 ]$.\\
 		We take a small cylinder that enccapsulates an element of the Surface. The field $\vec{E}$ is \textbf{perpendicular} to the surface (the charge would move otherwise). Therefore the charge $q_{int}$ enclosed by the Gaussian surface lies on the conductor's surface in an area $A$. Knowing that $\sigma$ is the charge per unit area, then $q_{int}$ is equal to $\sigma A$. Substituting $\sigma A$ for $q_{int}$ and $EA$ for $\Phi$, Gauss' law becomes:
 		\begin{equation*}
 			\varepsilon_0 EA = \sigma A 
@@ -611,8 +612,37 @@
 	
 		\subsection*{3.7 Gauss' Law: Cylindrical Symmetry}
 		
+		Infinitely long cylindrical plastic rod with uniform positive linear charge density $\lambda$ $[ C/m ]$. Let's find an expression for the magnitude of the Electric field $\vec{E}$ at a distance $r$ from the axis of the rod. The Gaussian Surface we choose should match the simmetry of the problem (which is cylindrical).
 		
+		 We choose a circular cylinder of radius $r$ and length $h$, coaxial with the rod. Any rotation of the rod (about its longitudinal axis) wouldn't make any change in the electric field. Therefore at every point on the cylindrical part of the Gaussian surface $\vec{E}$ must have the same magnitude $E$ and must directed radially outside (for a positively charged rod). \\
 		
+		Since $2\pi r$ is the cylinder circumference and $h$ is its height, the area A of the cylindrical surface is $2\pi rh$. The flux $\vec{E}$ through the surface is then
+		\begin{equation*}
+			\Phi = EA\cos\theta = E(2\pi rh)\cos0 = E(2\pi rh)
+		\end{equation*}
+		There is no flux through the end caps of the surface since $\vec{E}$ is radially directed, thus parallel to the end caps at every point.
+		
+		The charge enclosed by the surface is $\lambda h$, therefore
+		\begin{equation*}
+			\varepsilon_0 \Phi = q_{int}
+		\end{equation*}
+		reduces to
+		\begin{equation*}
+			\varepsilon_0 E(2\pi rh) = \lambda h
+		\end{equation*}
+	
+		We can then describe the field around an infinitely long, straight rod of charge as
+		\begin{equation*}
+			E = \frac{\lambda}{2\pi\epsilon_0 r}
+			\tag{line of charge, 3-11}
+		\end{equation*}
+	
+		
+	
+	
+		\subsection*{3.8 Gauss' Law: Planar Symmetry}
+		
+		Thin, infinite, non-conducing sheet with an uniform (positive) surface charge density $\sigma$ $[ C/m^2 ]$. 
 
 
 	\end{document}
