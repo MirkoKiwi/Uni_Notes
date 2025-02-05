@@ -817,16 +817,61 @@
 			1 \, \text{eV} = e(1 \text{V}) =  ( 1.60 \cdot 10^{-19} \text{C} )
 			( 1 \, \text{J} / \text{C} ) = 1.60 \cdot 10^{-19} \text{J}
 		\]
+		
+		
+		
+		\subsection*{4.1 Work done by an Applied Force}
+		
 		We supposedly move a particle of charge $q$ from $i$ to $f$ in an electric field by applying a force to it, this force does work $W_{\text{app}}$ while the electric field does work $W$. By the work-kinetic energy theorem the change in kinetic energy $\Delta K$ of the particle is:
 		\begin{equation*}
 			\Delta K = K_f - K_i = W_{\text{app}} + W
 			\tag{4-6}
 		\end{equation*}
-		We now suppose the particle is stationary before and after the move. Then $K_f$ and $K_i$ are both zero. Eq.4-6 reduces to
+		We now suppose the particle is stationary before and after the move. Then $K_f$ and $K_i$ are both zero. There's no change in kinetic energy and Eq.4-6 reduces to:
 		\begin{equation*}
 			W_{\text{app}} = -W
 			\tag{4-7}
 		\end{equation*}
-
+		By substituting the latest equation into Eq. 4-1 we find that:
+		\begin{equation*}
+			\Delta U = U_f - U_i = W_{\text{app}}
+			\tag{4-8}
+		\end{equation*}
+		Doing the same substitution into Eq. 4-4 we find:
+		\begin{equation*}
+			W_{\text{app}} = q \, \Delta V
+			\tag{4-9}
+		\end{equation*}
+		
+		
+		
+		\subsection*{4.2 Equipotential Surfaces}
+		
+		Adjacent points with same \textbf{electric potential} form an \textbf{equipotential surface}. While moving a charge between two points of such surface, the electric field does \textit{not} produce work.
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=10cm]{Physics2_PNGs/electric-field-lines-surf.png}
+			\caption*{}
+			\label{fig:electric-field-lines-surf}
+		\end{figure} \\
+		The work $W$ done by the electric field is zero if the initial and final potentials ($V_f$ and $V_i$) are the same.
+		This zero work condition holds for any path connecting two points on the same equipotential surface. \\ 
+		- Equipotential surfaces for a point charge or spherically symmetric charge  distribution are \textbf{concentric spheres}. \\
+		- For a uniform electric field, these surfaces are \textbf{planes} \textit{perpendicular} to the field lines. \\
+		Electric field ($\vec{E}$) lines are always perpendicular to equipotential surfaces. If $\vec{E}$ was not perpendicular, it would do work on a charged particle moving along the surface, which contradicts the definition of an equipotential surface. \\ \\
+		Therefore, since any movement along the surface has $W = 0$, we can say:
+		\[
+			W = \vec{F} \cdot \vec{d} = q \, \vec{E} \cdot \vec{d}
+			  = q \, E \, d \, \cos \theta = 0 \rightarrow \theta = 90\text{°} \quad \text{(perpendicular)}
+		\]
+		
+		
+		
+		\subsection*{4.3 Calculating the Potential from the Electric Field}
+		
+		
+	
+		
+	
 
 	\end{document}
