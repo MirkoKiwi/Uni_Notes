@@ -17,6 +17,7 @@
 	\usepackage{caption}			   % for labeling images
 	\usepackage{bigints}			   % for bigger integral symbols	
 	\usepackage{subcaption}			   % subfigures functions
+	\usepackage{subfig}				   % subfigures
 	
 	% various theorems, numbered by section
 	
@@ -270,6 +271,7 @@
 			E = \frac{q\textit{z}}{4\pi\varepsilon_0 \textit{z}^2} \tag{Charged Ring ad Large Distances, 2-12}
 		\end{equation*}
 		
+		
 		\subsection*{2.3.1 A Field Guide for Lines of Charge}
 		Finding the electric field $\vec{E}$ produced at a point $P$ by a line of uniform charge, either circular or straight. The strategy is to pick on an element $dq$ of charge, find $d\vec{E}$ due to that element and integrate $d\vec{E}$ over the entire line of charge.
 		\begin{itemize}
@@ -361,15 +363,17 @@
 		If we let $R \rightarrow \infty$ while keeping $z$ finite, the equation reduces to
 		\begin{equation*}
 			E = \frac{\sigma}{2\varepsilon_0}
+			\tag{2-18}
 		\end{equation*}
 		This is the electric field produced by an infinite sheet of uniform charge. We get the same result by letting $z \rightarrow 0$ while keeping $R$ finite.
+		
 		
 		
 		\subsection*{2.5 Point Charge in an Electric Field}
 		
 		\begin{equation*}
 			\vec{F} = q\vec{E}
-			\tag{2-18}
+			\tag{2-19}
 		\end{equation*}
 		
 		The electrostatic force $\vec{F}$ acting on a charged particle located in an external electric field $\vec{E}$ has the direction of $\vec{E}$ if the charge $q$ of the particle is positive and has the opposite direction if $q$ is negative.
@@ -382,17 +386,17 @@
 		Given $\tau = rF\sin\phi$ we can write the magnitude of the net torque as:
 		\begin{equation*}
 			\tau = Fx\sin\theta + F(d-x)\sin\theta = Fd\sin\theta
-			\tag{2-19}
+			\tag{2-20}
 		\end{equation*}
 		or, by substituting $F = qE$ and $d = p / q$ we can find the magnitude of $\vec{\tau}$:
 		\begin{equation*}
 			\tau = pE\sin\theta
-			\tag{2-20}
+			\tag{2-21}
 		\end{equation*}
 		In a generalized vector form:
 		\begin{equation*}
 			\vec{\tau} = \vec{p} \times \vec{E}
-			\tag{Torque on a Dipole, 2-21}
+			\tag{Torque on a Dipole, 2-22}
 		\end{equation*}
 	
 		\begin{figure}
@@ -409,17 +413,17 @@
 		The dipole has less potential energy when it's in equilibrium orientation. Therefore when $\vec{\tau} = \vec{p} \times \vec{E} = 0$. The dipole is like a pendulum, which has the least gravitational potential energy in its equilibrium orientation. In any situation involvint potential energy we are free to define the 0 potential energy configuration. Given $\Delta U = -W$ and $W = \int \tau d\theta$ we find the potential energy at any angle $\theta$ to be:
 		\begin{equation*}
 			U = -W = -\int_{90^\circ}^{\theta} \tau d\theta = \int_{90^\circ}^{\theta} pE\sin\theta d\theta
-			\tag{2-22}
+			\tag{2-23}
 		\end{equation*}
 		Evaluating the integral leads to:
 		\begin{equation*}
 			U = -pE\cos\theta
-			\tag{2-23}
+			\tag{2-24}
 		\end{equation*}
 		We can generalize this equation in vectorial form as
 		\begin{equation*}
 			U = -\vec{p} \cdot \vec{E}
-			\tag{Potential Energy of a Dipole, 2-24}
+			\tag{Potential Energy of a Dipole, 2-25}
 		\end{equation*}
 		
 		
@@ -502,13 +506,13 @@
 		
 		Gauss' Law relates the net flux $\Phi$ of an electric field through a closed surface (a Gaussian Surface) to the net charge $q_{enc}$ that is \textit{enclosed} by that surface. It tells us that:
 		\begin{equation*}
-			\varepsilon_0 \Phi = q_{enc}
+			\varepsilon_0 \Phi = q_{\text{int}}
 			\tag{Gauss' Law, 3-5}
 		\end{equation*}
 	
 		By substituting 3-5 into the definition of Flux, we can also write Gauss' Law as:
 		\begin{equation*}
-			\varepsilon_0 \bigointssss \vec{E} \cdot d\vec{A} = q_{enc}
+			\varepsilon_0 \bigointssss \vec{E} \cdot d\vec{A} = q_{\text{int}}
 			\tag{Gauss' Law, 3-6} 
 		\end{equation*}
 		
@@ -529,11 +533,11 @@
 		
 		In Fig. 8 we have an example of two charges of \textbf{equal magnitude}, but \textbf{opposite sign}. Four Gaussian Surfaces are shown in cross section:
 		\begin{itemize}
-			\item[Surface $S_1$]: $\vec{E}$ is outward for all points, thus flux $\Phi > 0$ and $q_{enc} > 0$.
-			\item[Surface $S_2$]: $\vec{E}$ is inward for all points, thus flux $\Phi < 0$ and $q_{enc} < 0$.
-			\item[Surface $S_3$]: This surface encloses no charge, thus $q_{enc} = 0$, by Gauss' Law also requires that net flux $\Phi = 0$.
+			\item[Surface $S_1$]: $\vec{E}$ is outward for all points, thus flux $\Phi > 0$ and $q_{\text{int}} > 0$.
+			\item[Surface $S_2$]: $\vec{E}$ is inward for all points, thus flux $\Phi < 0$ and $q_{\text{int}} < 0$.
+			\item[Surface $S_3$]: This surface encloses no charge, thus $q_{\text{int}} = 0$, by Gauss' Law also requires that net flux $\Phi = 0$.
 			\item[Surface $S_4$]: This surface encloses no \textit{net} charge, because the enclosed positive and negative charges have equal magnitudes \\ 
-			($q_{enc} = q_1 - q_2 = 0$). Gauss' Law requires that net flux $\Phi = 0$.
+			($q_{\text{int}} = q_1 - q_2 = 0$). Gauss' Law requires that net flux $\Phi = 0$.
 		\end{itemize}
 		\ \\ \\ 		
 		
@@ -544,7 +548,7 @@
 		
 		\begin{equation*}
 			\varepsilon_0 \oint \vec{E} \cdot d\vec{A} =
-			\varepsilon_0 \oint EdA = q_{enc}
+			\varepsilon_0 \oint EdA = q_{\text{int}}
 			\tag{3-7}
 		\end{equation*}
 
@@ -595,7 +599,7 @@
 		Overall, the charge does not distribute evenly over the Surface of a Conductor. \\
 	
 		Eventhough there's a direct relationship between the field $\vec{E}$ and the (surface) Charge Density $\sigma$ $[ C/m^2 ]$.\\
-		We take a small cylinder that enccapsulates an element of the Surface. The field $\vec{E}$ is \textbf{perpendicular} to the surface (the charge would move otherwise). Therefore the charge $q_{int}$ enclosed by the Gaussian surface lies on the conductor's surface in an area $A$. Knowing that $\sigma$ is the charge per unit area, then $q_{int}$ is equal to $\sigma A$. Substituting $\sigma A$ for $q_{int}$ and $EA$ for $\Phi$, Gauss' law becomes:
+		We take a small cylinder that enccapsulates an element of the Surface. The field $\vec{E}$ is \textbf{perpendicular} to the surface (the charge would move otherwise). Therefore the charge $q_{int}$ enclosed by the Gaussian surface lies on the conductor's surface in an area $A$. Knowing that $\sigma$ is the charge per unit area, then $q_{\text{int}}$ is equal to $\sigma A$. Substituting $\sigma A$ for $q_{int}$ and $EA$ for $\Phi$, Gauss' law becomes:
 		\begin{equation*}
 			\varepsilon_0 EA = \sigma A 
 			\tag{3-9}
@@ -624,7 +628,7 @@
 		
 		The charge enclosed by the surface is $\lambda h$, therefore
 		\begin{equation*}
-			\varepsilon_0 \Phi = q_{int}
+			\varepsilon_0 \Phi = q_{\text{int}}
 		\end{equation*}
 		reduces to
 		\begin{equation*}
@@ -642,7 +646,144 @@
 	
 		\subsection*{3.8 Gauss' Law: Planar Symmetry}
 		
-		Thin, infinite, non-conducing sheet with an uniform (positive) surface charge density $\sigma$ $[ C/m^2 ]$. 
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4cm]{Physics2_PNGs/planar-gauss-surf.png}
+			\caption*{}
+			\label{fig:planar-gauss-surf.png}
+		\end{wrapfigure}
+		
+		
+		Thin, infinite, non-conducing sheet with an uniform (positive) surface charge density $\sigma$ $[ C/m^2 ]$. A useful Gaussian surface is a closed cylinder with end caps of area $A$, arranged to pierce the sheet perpendicularly as shown. From symmetry, $\vec{E}$ must be perpendicular to the sheet and hence to the end caps. Furthermore, since the charge is positive, $\vec{E}$ is directed \textit{away} from the sheet, and thus the electric field lines pierce the two Gaussian end caps in an outward direction. Because the field lines do not pierce the curved surface, there is no flux through this portion of the Gaussian surface. Thus, $\vec{E} \cdot d\vec{A}$ is simply $E \, dA$; then Gauss’ law,
+		
+		\begin{equation*}
+			\varepsilon_0 \oint \vec{E} \cdot d\vec{A} = q_{\text{int}}
+		\end{equation*}
+		
+		becomes
+		
+		\begin{equation*}
+			\varepsilon_0 (EA + EA) = \sigma A,
+		\end{equation*}
+		
+		where $\sigma A$ is the charge enclosed by the Gaussian surface. This gives
+		
+		\begin{equation*}
+			E = \frac{\sigma}{2\varepsilon_0} \quad \text{(sheet of charge).}
+			\tag{3-12}
+		\end{equation*}
+		
+		Since we are considering an infinite sheet with uniform charge density, this result holds for any point at a finite distance from the sheet. Equation (3-12) agrees with Eq. 2-18, which we found by integration of electric field components.
+		
+		
+		
+		\subsection*{3.8.1 Two Conducting Plates}
+		
+		If there is no external electric field to force the positive charge into some particular distribution, it will spread out on the two faces with a uniform surface charge density of magnitude $\sigma$. From Eq. 3-10 we know that just outside the plate this charge sets up an electric field of magnitude
+		
+		\begin{equation*}
+			E = \frac{\sigma}{\varepsilon_0}
+		\end{equation*}
+		Since the excess charge is positive, the field is directed away from the plate.
+		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=5cm]{Physics2_PNGs/two-conducting-plates.png}
+			\caption*{}
+			\label{fig:two-conducting-plates.png}
+		\end{wrapfigure}
+		
+		Figure 23-16b shows an identical plate with excess negative charge having the same magnitude of surface charge density $\sigma$. The only difference is that now the electric field is directed toward the plate.
+		
+		Suppose we arrange for the plates of a and b to be close to each other and parallel. Since the plates are conductors, when we bring them into this arrangement, the excess charge on one plate attracts the excess charge on the other plate, and all the excess charge moves onto the inner faces of the plates as in c. With twice as much charge now on each inner face, the new surface charge density (call it $\sigma_1$) on each inner face is twice $\sigma$. Thus, the electric field at any point between the plates has the magnitude
+		
+		\begin{equation}
+			E = \frac{2\sigma_1}{\varepsilon_0} = \frac{\sigma}{\varepsilon_0}
+			\quad \text{(two conducting plates)} \tag{3-13}
+		\end{equation}
+		
+		This field is directed away from the positively charged plate and toward the negatively charged plate. Since no excess charge is left on the outer faces, the electric field to the left and right of the plates is zero.
+		
+
+
+		\subsection*{3.9 Gauss' Law: Spherical Symmetry}
+		
+		\begin{itemize}
+			\item[1.] A shell of uniform charge attracts or repels a charged particle that is outside the shell
+			as if all the shell’s charge were concentrated at the center of the shell.  
+			\item[2.] If a charged particle is located inside a shell of uniform charge, there is no electrostatic
+			force on the particle from the shell.
+		\end{itemize}
+
+		We have a charged spherical shell of total charge $q$ and radius $R$, and two concentric spherical Gaussian surfaces ( $S_1$ and $S_2$ ). Applying Gauss’ law to $S_2$ (for which $r \geq R$):
+		
+		\begin{equation}
+			E = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2}, 
+			\tag{(spherical shell, field at $r \geq R$), 3-14}
+		\end{equation}
+		This field is the same as the one set up by a point charge at the center of the shell. Apllying Gauss' law to $S_1$ (for which $r < R$):
+		\begin{equation}
+			E = 0,
+			\tag{spherical shell, field at $r < R$, 3-15}
+		\end{equation}
+		Since the surface $S_1$ encloses no charge.
+		
+		Every distribution with spherical symmetry is a superposition of concentric layers. To apply the two shell theorems, each shell needs to have the same volume charge density $\rho$. Thus for the charge distribution as a whole $\rho$ can only vary with $r$. \\
+		Letting $q'$ represent the charge enclosed by any  Gaussian surface, we can
+		rewrite Eq. 3-14 as:
+		
+		\begin{equation}
+			E = \frac{1}{4\pi\varepsilon_0} \frac{q'}{r^2},
+			\tag{(spherical distribution, field at $r \leq R$), 3-16}
+		\end{equation} 
+		If the full charge $q$ is uniformly distributed, then $q'$ enclosed within radius $r$ is proportional to $q$:
+		
+		\[
+		\frac{q'}{q} = \frac{\text{volume of sphere } r}{\text{volume of sphere } R}
+		\quad \text{or} \quad
+		\frac{q'}{\frac{4}{3} \pi r^3} = \frac{q}{\frac{4}{3} \pi r^3} 
+		\tag{3-17}
+		\]
+		This gives us
+		\[
+		q' = q \frac{r^3}{R^3}
+		\tag{3-18}
+		\]
+		Substituting this into Eq. 3-16 yields:
+		\begin{equation*}
+			E = \biggl( \frac{q}{4\pi\varepsilon_0 R^3} \biggl) r
+			\tag{(uniform charge, field at $r \leq R$), 3-19}
+		\end{equation*}
+		
+		\begin{figure}[h]
+			\centering
+			\begin{subfigure}{0.45\textwidth} % Adjust width as needed
+				\centering
+				\includegraphics[width=6cm]{Physics2_PNGs/shell-theorem.png} % Replace with actual file
+				\caption*{A thin, uniformly charged,
+					spherical shell with total charge q, in cross
+					section. Two Gaussian surfaces $S_1$ and $S_2$
+					are also shown in cross section. Surface $S_2$
+					encloses the shell, and $S_1$ encloses only the
+					empty interior of the shell.}
+				\label{fig:shell-theorem.png}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}{0.45\textwidth} % Adjust width as needed
+				\centering
+				\includegraphics[width=4cm]{Physics2_PNGs/gauss-spherical-symm.png} 
+				\caption*{}
+				\label{fig:gauss-spherical-symm.png}
+			\end{subfigure}
+			\caption*{}
+			\label{fig:both}
+		\end{figure}
+		\newpage
+		
+		
+		
+		
+		\section*{4. Electric Potential}
 
 
 	\end{document}
