@@ -268,7 +268,8 @@
 		This equation yields the same results even if $q$ is negative. \\
 		If we assume that $\textit{z} \gg R$, $\textit{z}^2 + R^2$ can be approximated as $\textit{z}^2$ and 2-11 becomes:
 		\begin{equation*}
-			E = \frac{q\textit{z}}{4\pi\varepsilon_0 \textit{z}^2} \tag{Charged Ring ad Large Distances, 2-12}
+			E = \frac{q\textit{z}}{4\pi\varepsilon_0 \textit{z}^2} 
+			\tag{Charged Ring at Large Distances, 2-12}
 		\end{equation*}
 		
 		
@@ -869,7 +870,38 @@
 		
 		\subsection*{4.3 Calculating the Potential from the Electric Field}
 		
+		Considering an arbitrary electric field $\vec{E}$ and a positive test charge $q_0$ moving from two points $i$ and $f$ in the field. At any point in the path an electrostatic force $q_0 \, \vec{E}$ acts on the charge as it moves through a differential displacement $d\vec{s}$. We know that:
+		\[
+			dW = \vec{F} \cdot d\vec{s}
+			\tag{4-10}
+		\]
+		Given that $\vec{F} = q_0 \, d\vec{s}$ Eq. 4-10 becomes:
+		\[
+			dW = q_0 \vec{E} \cdot d\vec{s}
+			\tag{4-11}
+		\]
+		To find the total work $W$ done on the particle as it moves from $i$ to $f$ we sum the differential work through all the displacements $d\vec{s}$:
+		\begin{equation*}
+			W = q_0 \int_{i}^{f} \vec{E} \cdot d\vec{s}
+			\tag{4-12}
+		\end{equation*}
+		Or, in terms of potential difference
+		\begin{equation*}
+			V_f - V_i = - \int_{i}^{f} \vec{E} \cdot d\vec{s}
+			\tag{4-13}
+		\end{equation*}
+		This yield the same result since the electrostatic force is \textit{conserative} and every path returns the same result. If we set $V_i = 0$, Eq. 4-13 becomes:
+		\begin{equation*}
+			V = - \int_{i}^{f} \vec{E} \cdot d\vec{s}
+			\tag{4-14}
+		\end{equation*}
+		giving us the potential $V$ at any final point $f$ in the electric field, relative to the \textit{zero} potential in the initial point. \\
 		
+		In pratical terms, if we let $i$ be at infinity, Eq.4-14 gives us the potential $V$ at any point $f$.
+		
+		
+		
+		\subsection*{4.4 Potential due to a Point Charge}
 	
 		
 	

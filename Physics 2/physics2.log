@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  5 FEB 2025 13:46
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  6 FEB 2025 23:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -215,24 +215,14 @@ Package caption Info: New subtype `subfigure' on input line 238.
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count289
 )
-(c:/texlive/2024/texmf-dist/tex/latex/subfig/subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count290
-\sf@farskip=\skip57
-\sf@captopadj=\dimen184
-\sf@capskip=\skip58
-\sf@nearskip=\skip59
-\sf@top=\skip60
-\sf@bottom=\skip61
-)
-\c@thm=\count291
+\c@thm=\count290
 
 (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
-\g__graphics_track_int=\count292
+\g__graphics_track_int=\count291
 \l__pdf_internal_box=\box55
-\g__pdf_backend_annotation_int=\count293
-\g__pdf_backend_link_int=\count294
+\g__pdf_backend_annotation_int=\count292
+\g__pdf_backend_link_int=\count293
 )
 (./physics2.aux)
 \openout1 = `physics2.aux'.
@@ -289,7 +279,6 @@ LaTeX Font Info:    ... okay on input line 38.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
@@ -347,12 +336,12 @@ File: Physics2_PNGs/electric-line-charge.png Graphic file (type bmp)
 File: Physics2_PNGs/elec-charged-disk.png Graphic file (type bmp)
 <Physics2_PNGs/elec-charged-disk.png>
 
-Underfull \hbox (badness 4819) in paragraph at lines 316--316
+Underfull \hbox (badness 4819) in paragraph at lines 317--317
 []|\TU/lmr/m/n/12 Figure 5: A disk
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 316--316
+Underfull \hbox (badness 7133) in paragraph at lines 317--317
 \TU/lmr/m/n/12 of uniform positive
  []
 
@@ -371,12 +360,12 @@ File: Physics2_PNGs/elec-veloc-flux.png Graphic file (type bmp)
 File: Physics2_PNGs/gaussian-elec-field.png Graphic file (type bmp)
 <Physics2_PNGs/gaussian-elec-field.png>
 
-Overfull \hbox (60.09464pt too wide) in paragraph at lines 456--457
+Overfull \hbox (60.09464pt too wide) in paragraph at lines 457--458
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--468
+Underfull \hbox (badness 10000) in paragraph at lines 467--469
 
  []
 
@@ -386,7 +375,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 466--468
 File: Physics2_PNGs/closed-cylinder.png Graphic file (type bmp)
 <Physics2_PNGs/closed-cylinder.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--526
+Underfull \hbox (badness 10000) in paragraph at lines 516--522
 
  []
 
@@ -396,55 +385,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 521--526
 File: Physics2_PNGs/gaussian-surf-lines.png Graphic file (type bmp)
 <Physics2_PNGs/gaussian-surf-lines.png>
 
-Overfull \hbox (36.80731pt too wide) in paragraph at lines 529--530
+Overfull \hbox (36.80731pt too wide) in paragraph at lines 525--526
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
 
  []
 
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 580--582
+Underfull \hbox (badness 10000) in paragraph at lines 575--577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--587
+Underfull \hbox (badness 10000) in paragraph at lines 579--582
 
  []
 
 File: Physics2_PNGs/external-elec-field.png Graphic file (type bmp)
 <Physics2_PNGs/external-elec-field.png>
 
-Overfull \hbox (65.26007pt too wide) in paragraph at lines 594--595
+Overfull \hbox (65.26007pt too wide) in paragraph at lines 589--590
  [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
-
  []
 
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 621--622
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
 
  []
 
 File: Physics2_PNGs/planar-gauss-surf.png Graphic file (type bmp)
 <Physics2_PNGs/planar-gauss-surf.png>
 
-Overfull \hbox (36.80731pt too wide) in paragraph at lines 651--652
+Overfull \hbox (36.80731pt too wide) in paragraph at lines 646--647
  [][] 
  []
 
@@ -454,7 +438,7 @@ Overfull \hbox (36.80731pt too wide) in paragraph at lines 651--652
 File: Physics2_PNGs/two-conducting-plates.png Graphic file (type bmp)
 <Physics2_PNGs/two-conducting-plates.png>
 
-Overfull \hbox (65.26007pt too wide) in paragraph at lines 691--692
+Overfull \hbox (65.26007pt too wide) in paragraph at lines 686--687
  [][] 
  []
 
@@ -469,19 +453,36 @@ File: Physics2_PNGs/gauss-spherical-symm.png Graphic file (type bmp)
 
 [15]
 
-[16] (./physics2.aux)
+[16]
+File: Physics2_PNGs/electric-field-lines-surf.png Graphic file (type bmp)
+<Physics2_PNGs/electric-field-lines-surf.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--864
+
+ []
+
+
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 897--899
+
+ []
+
+
+
+[18] (./physics2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4478 strings out of 475175
- 78097 string characters out of 5757551
- 474363 words of memory out of 5000000
- 27393 multiletter control sequences out of 15000+600000
- 572449 words of font info for 108 fonts, out of 8000000 for 9000
+ 4366 strings out of 475175
+ 76374 string characters out of 5757551
+ 470137 words of memory out of 5000000
+ 27285 multiletter control sequences out of 15000+600000
+ 572448 words of font info for 108 fonts, out of 8000000 for 9000
  374 hyphenation exceptions out of 8191
- 57i,19n,65p,935b,537s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,19n,65p,935b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on physics2.pdf (16 pages).
+Output written on physics2.pdf (18 pages).
