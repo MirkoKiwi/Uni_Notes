@@ -1014,9 +1014,50 @@
 			\caption*{}
 			\label{fig:rod-continous.png}
 		\end{wrapfigure}
-		Miaomiaomiaomiao
+		Thin, nonconducing rod of length $L$ with positive charge of uniform linear density $\lambda$. Let's determine the potential $V$ due to the rod at a point $P$ with perpendicular distance $d$ from the left end of the rod. We consider a differential element $dx$ of the rod. This element has differential charge of:
+		\[
+			dq = \lambda \, dx
+			\tag{4-24}
+		\]
+		This element produces an electric potential $dV$ at $P$, which has distance 
+		$r = (x^2 + d^2)^{1/2}$ from $dx$. Treating this element as a point charge, we can use Eq. 4-22 to write $dV$ as:
+		\begin{equation*}
+			dV = \frac{1}{4 \pi \varepsilon_0} \frac{dq}{r}
+			   = \frac{1}{4 \pi \varepsilon_0} \, \frac{\lambda \, dx}{(x^2 + d^2)^{1/2}}
+			\tag{4-25}
+		\end{equation*}
+		Since the charge on the rod is positive and we have taken $V = 0$ at infinity, then $dV$ must be positive. \\
+		We can now find $V$ by integrating along the length of the rod, from $x = 0$ to 
+		$x = L$:
+		\begin{equation*}
+			V = \int dV = \int_{0}^{L} \frac{1}{4 \pi \varepsilon_0}
+			              \, \frac{\lambda}{(x^2 + d^2)^{1/2}} \, dx 
+		\end{equation*}
+		\[
+			= \frac{\lambda}{4 \pi \varepsilon_0} \, 
+			  \int_0^L \frac{\lambda}{(x^2 + d^2)^{1/2}} \, dx
+		\]
+		\[
+			= \frac{\lambda}{4 \pi \varepsilon_0} 
+			    \biggl[ \ln \biggl( x + (x^2 + d^2)^{1/2} \biggl) \biggl]_0^L
+		\]
+		\[
+			= \frac{\lambda}{4 \pi \varepsilon_0} 
+				\biggl[ \ln \biggl( L + (L^2 + d^2)^{1/2} \biggl) - \ln d \, \biggl]
+		\]
+		
+		We can further simplify the expression by using the relation $\ln A - \ln B = \ln ( A / B )$. Hence we can write: 
+		\begin{equation*}
+			V = \frac{\lambda}{4 \pi \varepsilon_0} 
+			     \ln \biggl[ \frac{L + ( L^2 + d^2 )^{1/2}}{d} \biggl]
+			\tag{Potential due to Line of Charge, 4-26}
+		\end{equation*}
+		$V$ will be as a result positive, being it a sum of positive values of $dV$, being also consistent with the logarithm being positive with values bigger than 1 in the argument. 
 		
 		
+		\newpage
+		
+		\subsection*{4.7.2 Continous Distributions: Charged Disk}
 
 
 
