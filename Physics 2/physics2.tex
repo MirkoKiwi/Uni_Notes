@@ -944,9 +944,47 @@
 
 		\subsection*{4.5 Potential due to Group of Point Charges}
 
+		The superposition principle holds for electric potential $V$ as well, therefore, for $n$ charges, the net potential will be: 
+		\begin{equation*}
+			V = \sum_{i=1}^{n} V_i 
+			  = \frac{1}{4 \pi \varepsilon_0} \sum_{i=1}^{n} \frac{q_i}{r_i}
+			  \tag{Potential due to $n$ point charges, 4-19}
+		\end{equation*}
 
 
 
+		\subsection*{4.6 Potential due to an Electric Dipole}
+
+		\begin{wrapfigure}{r}{0.1\textwidth}
+			\centering
+			\includegraphics[width=3.5cm]{Physics2_PNGs/dipole-point-potential.png}
+			\caption*{}
+			\label{fig:dipole-point-potential.png}
+		\end{wrapfigure}
+
+		Now let's apply 4-19 to an electric dipole to find the potential at any arbitrary point $P$, in which the positive point charge ( at distance $r_{(+)}$ ) sets up potential $V_{(+)}$ and the negative charge sets $V_{(-)}$ at distance $r_{(-)}$. Therefore the net potential is given by:
+		\begin{equation*}
+			V = \sum_{i=1}^{2} V_i = V_{(+)} + V_{(-)}
+			  = \frac{1}{4 \pi \varepsilon_0} \biggl( \frac{q}{r_{(+)}} + 
+			  										  \frac{-q}{r_{(-)}} \biggl)
+			  =  \frac{q}{4 \pi \varepsilon_0} \frac{r_{(-)} - r_{(+)}}{r_{(+)}r_{(-)}}
+			  \tag{4-20}
+		\end{equation*}
+		Since we're interested in points far from the dipole, such as $r \gg d$, where $d$ is the distance between the charges, we can approximate
+		\[
+			r_{(+)} - r_{(-)} \approx d \cos\theta 
+			 \quad \text{and} \quad r_{(+)} r_{(-)} \approx r^2
+		\]
+		By substituting these quantities into Eq. 4-20 we can approximate $V$ to be:
+		\[
+			V = \frac{q}{4 \pi \varepsilon_0} \frac{d \, \cos \theta}{r^2}
+		\]
+		where $\theta$ is measured from the dipole axis. We can then express V as:
+		\begin{equation*}
+			V = \frac{1}{4 \pi \varepsilon_0} \frac{p \cos \theta}{r^2}
+			\tag{Electric Dipole, 4-21}
+		\end{equation*}
+		in which $p$ ($=q\,d$) is the magnitude of the electric dipole moment vector $\vec{p}$, directed along the dipole axis (meaning $\theta$ is measured from the direction of $\vec{p}$).
 
 
 
