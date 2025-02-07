@@ -903,7 +903,56 @@
 		
 		\subsection*{4.4 Potential due to a Point Charge}
 	
+		\begin{wrapfigure}{r}{0.19\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{Physics2_PNGs/point-charge-potential.png}
+			\caption*{}
+			\label{fig:point-charge-potential.png}
+		\end{wrapfigure}
+		We need to find an expression to intercept the electric potential $V$ relative to the zero potential at infinity. Considering a point $P$ at a distance $R$ from a  positive point charge $q$ we can use Eq. 4-13 to achieve such task. Let us first evaluate the dot product: 
+		\begin{equation*}
+			\vec{E} \cdot d\vec{s} = E \, \cos\theta \, ds
+			\tag{4-15}
+		\end{equation*}
+		Since the electric field $\vec{E}$ is directed radially outward from the particle the differential displacement $d\vec{s}$ has same direction as $\vec{E}$. That means that in Eq. 4-15, $\theta = 0$ and $\cos\theta = 1$ accordingly. Given that the path is radial we can write $ds$ as $dr$ and we can evaluate Eq. 4-13 from $R$ to $\infty$:
+		\begin{equation}
+			V_f - V_i = - \int_{R}^{\infty} E \, dr
+			\tag{4-16}
+		\end{equation}
+		We now set $V_f = 0 \, ( \text{at} \, \infty )$ and $V_i = V$, we also know that the magnitude $E$ is equal to:
+		\[
+			E = \frac{1}{4 \pi \varepsilon_0} \, \frac{q}{r^2}
+		\]
+		With these informations, 4-16 becomes:
+		\begin{equation*}
+			0 - V = - \frac{q}{4 \pi \varepsilon_0} \int_{R}^{\infty} \frac{1}{r^2} \, dr
+				  = \frac{q}{r \pi \varepsilon_0} \biggl[ \frac{1}{r} \biggl]_R^\infty
+				  = - \frac{1}{4 \pi \varepsilon_0} \frac{q}{R}
+			\tag{4-17}
+		\end{equation*}
+		Solving for $V$ and substituting $R$ with $r$:
+		\begin{equation*}
+			V = \frac{1}{4 \pi \varepsilon_0} \frac{q}{r}
+			\tag{Potential due to Point Charge, 4-18}
+		\end{equation*}
+		A positively charged particle produces a positive electric potential. A negatively
+		charged particle produces a negative electric potential. 
 		
-	
+		We can also prove, using the shell theorems, that this expression is also valid for \textit{spherical charge distributions}.
+
+
+
+		\subsection*{4.5 Potential due to Group of Point Charges}
+
+
+
+
+
+
+
+
+
+
+
 
 	\end{document}
