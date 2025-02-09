@@ -988,7 +988,7 @@
 
 
 
-		\newpage
+	%	\newpage
 		
 		\subsection*{4.7 Potential Due to a Continous Charge Distribution}
 
@@ -1055,9 +1055,43 @@
 		$V$ will be as a result positive, being it a sum of positive values of $dV$, being also consistent with the logarithm being positive with values bigger than 1 in the argument. 
 		
 		
-		\newpage
+	%	\newpage
 		
 		\subsection*{4.7.2 Continous Distributions: Charged Disk}
+
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/disk-continous.png}
+			\caption*{}
+			\label{fig:disk-continous.png}
+		\end{wrapfigure}
+		Plastic disk of radius $R$ that has a uniform charge density $\sigma$ on one surface. We need to derive an expression for $V(z)$, the electric potential at any point on the central axis.
+		
+		Consider a differential element consisting of a flat ring of radius \( R' \) and radial width \( dR' \). Its charge has magnitude:
+		\[
+		dq = \sigma (2\pi R') (dR'),
+		\]
+		in which $(2\pi R')(dR')$ is the upper surface area of the ring. All parts of this charged element are the same distance $r$ from point $P$ on the disk’s axis. We can use Eq. 4-22 to write the contribution of this ring to the electric potential at \( P \) as
+		
+		\[
+			dV = \frac{1}{4\pi \epsilon_0} \frac{dq}{r} = \frac{1}{4\pi \epsilon_0} 		 \frac{\sigma (2\pi R')(dR')}{\sqrt{z^2 + R'^2}}
+			\tag{4-27}
+		\]
+		We find the net potential at $P$ by integrating the contributions of all the rings from $R' = 0$ to $R' = R$:
+		
+		\[
+			V = \int dV = \frac{\sigma}{2\epsilon_0} \int_0^R \frac{R' \, dR'}{\sqrt{z^2 + R'^2}} = \frac{\sigma}{2\epsilon_0} (\sqrt{z^2 + R^2} - z)
+			\tag{Charged Disk, 4-28}
+		\]
+		
+		
+		
+		\newpage
+		
+		\subsection*{4.8 Calculating Field ($\vec{E}$) from the potential ($V$)}
+
+		
+	
 
 
 
