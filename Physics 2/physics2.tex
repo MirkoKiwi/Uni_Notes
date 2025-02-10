@@ -1083,6 +1083,7 @@
 			V = \int dV = \frac{\sigma}{2\epsilon_0} \int_0^R \frac{R' \, dR'}{\sqrt{z^2 + R'^2}} = \frac{\sigma}{2\epsilon_0} (\sqrt{z^2 + R^2} - z)
 			\tag{Charged Disk, 4-28}
 		\]
+		Also the variable in the second integral in 4-28 is $R'$ and not $z$, which remains constant.
 		
 		
 		
@@ -1090,8 +1091,42 @@
 		
 		\subsection*{4.8 Calculating Field ($\vec{E}$) from the potential ($V$)}
 
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/charge-in-elec-field.png}
+			\caption*{}
+			\label{fig:charge-in-elec-field.png}
+		\end{wrapfigure}
+		We can find the potential $V$ from the Field $\vec{E}$ by using \\ 
+		$V_f - V_i = - \int_{i}^{f} \vec{E} \cdot d\vec{s}$. We can easily search for the field $\vec{E}$ from the potential $v$ by looking at it graphically. $\vec{E}$ is perpendicular to the equipotential surface, with intensity inversely proportional to distance $d\vec{s}$. We must then move $q_0$ on a by a differential distance $d\vec{s}$. From Eq. 4-4 we see that the work done on the charge is $-q_0 \, dV$, while from Eq. 4-11 we get that the work done by the field can be written as $(q_0\vec{E}) \cdot d\vec{s}$, or $q_0E(\cos\theta)  \, ds$.
+		Equating these eqpression for work yields:
+		\[
+			-q_0 \, dV = q_0E(\cos\theta) \, ds
+			\tag{4-29}
+		\]
+		or
+		\[
+			E \, \cos\theta = - \frac{dV}{ds}
+			\tag{4-30}
+		\]
+		Since $E$ is dependant on variation oon different axis (in this case the $s$ axis), we rewrite 4-30 as:
+		\begin{equation*}
+			E_s = - \frac{\partial V}{\partial s}
+			\tag{4-31}
+		\end{equation*}
+		Rewriting in a general form, involving space coordinates:
+		\begin{equation*}
+			E_x = - \frac{\partial V}{\partial x}; \quad
+			E_y = - \frac{\partial V}{\partial y}; \quad
+			E_z = - \frac{\partial V}{\partial z}.
+			\tag{4-32}
+		\end{equation*}
+
+
+
+		\subsection*{4-9 Electric Potential Energy of a System of Point Charges}
+
 		
-	
 
 
 
