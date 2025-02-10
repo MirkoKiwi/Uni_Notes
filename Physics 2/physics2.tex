@@ -1055,7 +1055,7 @@
 		$V$ will be as a result positive, being it a sum of positive values of $dV$, being also consistent with the logarithm being positive with values bigger than 1 in the argument. 
 		
 		
-	%	\newpage
+		\newpage
 		
 		\subsection*{4.7.2 Continous Distributions: Charged Disk}
 
@@ -1126,8 +1126,57 @@
 
 		\subsection*{4-9 Electric Potential Energy of a System of Point Charges}
 
-		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/2-charges-potential.png}
+			\caption*{}
+			\label{fig:2-charges-potential.png}
+		\end{wrapfigure}
+		The electric potential energy of a system of fixed point charges is equal to \textit{the work that must be done by an external agent to assemble the system}, bringing each charge in from an infinite distance. \\
+		We assume the simplest case, a system of 2 charges $q_1$ and $q_2$, separated by a change $r$. We can consider the work done and drop the minus sign in Eq. 4-4 since we're only interested in the work actually done, instead of the work done by the field. Therefore in our case the work done will be equal to $q_2V$, where $V$ is the potential set up by $q_1$ at the point where $q_2$ stands. \\
+		From Eq. 4-18 the potential then becomes:
+		\[
+			V = \frac{1}{4 \pi \varepsilon_0} \frac{q_1}{r}
+		\]
+		Therefore the electric potential energy from the pair of point charges is:
+		\begin{equation*}
+			U = W = q_2 V = \frac{1}{4 \pi \varepsilon_0} \frac{q_1 q_2}{r}
+			\tag{4-33}
+		\end{equation*}
+		If the charges have same sign, we have to do positive work to push them together against their own repulsion, the potential energy of the system is then \textit{positive}. \\
+		If the charges have opposite sign, we will have to do negative work to keep them stationary, therefore the potential energy of the system will be \textit{negative}.
 
+
+
+		\subsection*{4.10 Potential of a Charged Isolated Conductor}
+		
+		We know that $\vec{E} = 0$ for all points inside an isolated conductor and that an excess charge placed on it lies entirely on its surface. We also can extend this definition to say that all the points in the conductor will come to the same potential. And that's true even if the conductor has any kind of internal cavity and also if there's a net charge inside said cavity. 
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=3.5cm]{Physics2_PNGs/plot-charge-potential.png}
+			\caption*{}
+			\label{fig:plot-charge-potential.png}
+		\end{wrapfigure}
+		Therefore:
+		\begin{equation*}
+			V_f - V_i = - \int_{i}^{f} \vec{E} \cdot d\vec{s}
+		\end{equation*}
+		Since $\vec{E} = 0$ it is a	consequence that $V_f - V_i = 0$, thus $V_f = V_i$ for every pair of point $i$ and $f$ in the conductor. \\
+		Let's take for example a \textit{spherical isolated	conducting shell} of radius $r = 1.0$ m, having charge $q = 1.0$ $\mu$C. \\
+		From Eq. 4-18 we can calculate how $V(r)$ behaves as if it were concentrated at the center of the shell for external points. If we push a charge through the shell in its center (assuming such small hole exists) no extra work is needed since no net electric force acts on the charge. \\
+		We can therefore say that, for every point inside the shell, the potential $V$ is constant and the field $E = 0$. \\
+		On the outside, instead,  we have 
+		\[
+			V = \frac{q}{4 \pi \varepsilon_0 r'}, \quad \quad
+			E = - \frac{dV}{dr} = \frac{q}{4 \pi \varepsilon_0 r^2}
+		\]
+		The plot shows the result of these considerations.
+		
+		
+		
+		\subsection*{4.10.1 Isolated Conductor in an Electric Field}
+
+		
 
 
 	\end{document}
