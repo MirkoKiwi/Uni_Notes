@@ -18,7 +18,10 @@
 	\usepackage{bigints}			   % for bigger integral symbols	
 	\usepackage{subcaption}			   % subfigures functions
 %	\usepackage{subfig}				   % subfigures
-	
+	\usepackage[many]{tcolorbox}       % For highlighting equations
+
+
+
 	% various theorems, numbered by section
 	
 	\newtheorem{thm}{Theorem}[section]
@@ -73,7 +76,7 @@
 		Rearranging in \textbf{SI} tells us that: 
 		
 		\begin{equation*}
-			1C = (1A)(1s)
+			1 \, C = (1 \, A)(1 \, s)
 		\end{equation*}
 		For historical reasons the constant $k$ is usually written as $1/4\pi\varepsilon_0$, therefore the magnitude in Coulomb's Law becomes
 		
@@ -1151,20 +1154,19 @@
 
 		\subsection*{4.10 Potential of a Charged Isolated Conductor}
 		
-		We know that $\vec{E} = 0$ for all points inside an isolated conductor and that an excess charge placed on it lies entirely on its surface. We also can extend this definition to say that all the points in the conductor will come to the same potential. And that's true even if the conductor has any kind of internal cavity and also if there's a net charge inside said cavity. 
 		\begin{wrapfigure}{r}{0.17\textwidth}
 			\centering
 			\includegraphics[width=3.5cm]{Physics2_PNGs/plot-charge-potential.png}
 			\caption*{}
 			\label{fig:plot-charge-potential.png}
 		\end{wrapfigure}
-		Therefore:
+		We know that $\vec{E} = 0$ for all points inside an isolated conductor and that an excess charge placed on it lies entirely on its surface. We also can extend this definition to say that all the points in the conductor will come to the same potential. And that's true even if the conductor has any kind of internal cavity and also if there's a net charge inside said cavity. 6Therefore:
 		\begin{equation*}
 			V_f - V_i = - \int_{i}^{f} \vec{E} \cdot d\vec{s}
 		\end{equation*}
 		Since $\vec{E} = 0$ it is a	consequence that $V_f - V_i = 0$, thus $V_f = V_i$ for every pair of point $i$ and $f$ in the conductor. \\
 		Let's take for example a \textit{spherical isolated	conducting shell} of radius $r = 1.0$ m, having charge $q = 1.0$ $\mu$C. \\
-		From Eq. 4-18 we can calculate how $V(r)$ behaves as if it were concentrated at the center of the shell for external points. If we push a charge through the shell in its center (assuming such small hole exists) no extra work is needed since no net electric force acts on the charge. \\
+		From Eq. 4-18 we can calculate how $V(r)$ behaves as if it were concentrated at the center of the shell for external points. If we push a charge through the shell in its center (assuming such small hole exists) no extra work is needed since no net electric force acts on the charge. \\ \\
 		We can therefore say that, for every point inside the shell, the potential $V$ is constant and the field $E = 0$. \\
 		On the outside, instead,  we have 
 		\[
@@ -1387,9 +1389,171 @@
 			\tag{Isolated Sphere, 5-17}
 		\]
 		
+		\subsection*{5.3 Capacitors in Parallel and in Series}
+		
+		When there's a combination of capacitors in a circuit, we can replace that combination with an \textbf{equivalent capacitor}, useful to simplify the circuit.
+		
+		\subsection*{5.3.1 Capacitors in Parallel}
+		
+		\begin{wrapfigure}{r}{0.26\textwidth}
+			\centering
+			\includegraphics[width=6.5cm]{Physics2_PNGs/parallel-capacitors.png}
+			\caption*{}
+			\label{fig:parallel-capacitors.png}
+		\end{wrapfigure}
+		When a potential difference $V$ is applied across several capacitors connected in parallel, it is applied through each capacitor. The total charge $q$ stored on the capacitors is the sum of the charges stored in each capacitor.\\
+		Therefore we can replace the capacitors connected in parallel with an equivalent capacitor that has the same total charge q and same potential difference $V$ as the actual capacitors. \\
+		We can derive an expression for $C_{eq}$ by finding the charge on each actual capacitor, given 3 parallel capacitors($q_1$, $q_2$, $q_3$):
+		\[
+			q_1 = C_1 V, \quad q_2 = C_2 V, \quad q_3 = C_3 V
+		\]
+		The total charge on the parallel is then:
+		\[
+			q = q_1 + q_2 + q_3 = (C_1 + C_2 + C_3)V
+		\]
+		The equivalent capacitance, with same total charge $q$ and applied potential difference $V$ is then:
+		\[
+			C_{eq} = \frac{q}{V} = C_1 + C_2 + C_3
+		\]
+		Extending this result to any number $n$ of capacitors:
+		\begin{equation*}
+			C_{eq} = \sum_{j=1}^{n} C_j
+			\tag{$n$ Capacitors in Parallel, 5-18}
+		\end{equation*}
 		
 		
+		
+		\newpage
+		
+		\subsection*{5.3.2 Capacitors in Series}
+		
+		\begin{wrapfigure}{r}{0.2\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{Physics2_PNGs/series-capacitors.png}
+			\caption*{}
+			\label{fig:series-capacitors.png}
+		\end{wrapfigure}
+		When a potential difference $V$ is applied through several capacitors connected in series, the capacitors have identical charge $q$. The sum of the potential differences across all the capacitors is equal to the applied potential difference $V$. \\
+		Therefore they can be replaced with an equivalent capacitor that has the same charge $q$ and same total potential difference $V$ as the actual series capacitors.
+		We can derive an expression for $C_{eq}$ by finding the potential difference on each capacitor:
+		\[
+			V_1 = \frac{q}{C_1}, \quad V_2 = \frac{q}{C_2}, \quad V_3 = \frac{q}{C_3}
+		\]
+		The total potential difference $V$ due to the battery is the sum  of these three potential differences. Thus:
+		\[
+			V = V_1 + V_2 + V_3 = q \, \biggl( 
+				\frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} \biggl)
+		\]
+		The equivalent capacitance is then
+		\[
+			C_{eq} = \frac{q}{V} = \frac{1}{1/C_1 + 1/C_2 + 1/C_3}
+			\quad \text{or} \quad
+			\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}	
+		\]
+		We can generalize to any number $n$ of capacitor as:
+		\begin{equation*}
+			\frac{1}{c_{eq}} = \sum_{j=1}^{n} \frac{1}{C_j}
+			\tag{$n$ Capacitors in Serier, 5-19}
+		\end{equation*}
+		
+		
+		
+		\subsection*{5.4 Energy Stored in an Electric Field}
 
+		
+		In order to charge a capacitor, work must be done by an external agent. We can visualize the work required to charge a capacitor as being stored in form of potential energy $U$ in the electrif field between the plates. The energy can be recovered in any moment, by discharging the capacitor. \\
+		Suppose that at any given instant, a charge $q'$ has been transferred to one plate to the other. The potential difference $V'$ between the plate at that instant will be $q'/C$. If an increment of charge $dq'$ is transferred, the increment in work will be:
+		\[
+			dW = V' \, dq' = \frac{q'}{C} \, dq'
+		\]
+		The work required to totally charge up the capacitor to a final value $q$ is then:
+		\[
+			W = \int dW = \frac{1}{C} \int_{0}^{q} q' \, dq' = \frac{q^2}{2C}
+		\]
+		which is stored as \textit{potential energy} $U$ in the capacitor, therefore:
+		\begin{equation*}
+			U = \frac{q^2}{2C}
+			\tag{Potential Energy, 5-20}
+		\end{equation*}
+		From 5-1 we can also write this as:
+		\begin{equation*}
+			U = \frac{1}{2} CV^2
+			\tag{Potential Energy, 5-21}
+		\end{equation*}
+		These equations hold regardless of the geometry of the capacitor. \\ \\
+		In brief: the potential energy $V$ of a charged capacitor $C$ can be viewed as being stored in the electric field between the plates.
+		
+		
+		\subsection*{5.4.1 Energy Density}
+		
+		Considering a parallel-plate capacitor, neglecting fringing, the electric field has same value at all points between the plates. Thus the \textbf{energy density} $u$ (potential energy per unit volume between the plates) should also be uniform. \\
+		We can find $u$ by dividing the total potential energy by the volume $Ad$ of the space between the plates. By using Eq. 5-21 we yield:
+		\[
+			u = \frac{U}{Ad} = \frac{CV^2}{2Ad}
+			\tag{5-22}
+		\]
+		With Eq. 5-9 ($C = \varepsilon_0 A / d$) this becomes:
+		\[
+			u = \frac{ \frac{\varepsilon_0 A}{d} V^2}{2Ad}
+			  = \frac{\varepsilon_0}{2} \frac{V^2}{d^2}
+			  =\frac{1}{2} \, \varepsilon_0 \biggl( \frac{V}{d} \biggl)^2
+			\tag{5-23}
+		\]
+		However, knowing that $E = - \Delta V / \Delta s$), $V / D$ equals the electric field magnitude, so:
+		\begin{equation*}
+			u = \frac{1}{2} \varepsilon_0 E^2
+			\tag{Energy Density, 5-24}
+		\end{equation*}
+		This definition holds generally, if an electric field $\vec{E}$ exists at any point in space, then we can think of that point as a site of electric potential energy with a \textit{density}.
+		
+		
+		
+		\subsection*{5.5 Capacitor with a Dielectric}
 
+		\begin{wrapfigure}{r}{0.2\textwidth}
+			\centering
+			\includegraphics[width=4.7cm]{Physics2_PNGs/dielectrics.png}
+			\caption*{}
+			\label{fig:dielectrics.png}
+		\end{wrapfigure}	
+		If you fill the plates of a capacitor with a \textit{dielectric}, which is an insulating material, the capacitance increased by a numerical factor $\varepsilon_r$ ($\kappa$ in most textbooks) which is called \textbf{dielectric constant}. The dielectric constant of a vacuum is a unity by definition, since air is mostly empty space, it is just slightly greater than unity. \\
+		If the plates of a capacitor (with distance $L$ between them) are filled with a dielectric then, the capacitance becomes:
+		\[
+			C = \varepsilon_r \varepsilon_0 L = \varepsilon_r C_{\text{vacuum}}
+			\tag{5-25}
+		\]
+		By extension, in a region completely filled by a dielectric material of dielectric constant $\varepsilon_r$, all electrostatic equations containing the permittivity constant $\varepsilon_0$ are to be modified by replacing $\varepsilon_0$ with $\varepsilon_0 \varepsilon_r$\\ \\ \newpage
+		For example:
+		\[
+			E = \frac{q}{4 \pi \varepsilon_r \varepsilon_0 r^2}
+			\tag{Coulomb's Law for Point Charge, 5-26}
+		\]
+		\[
+			E = \frac{\sigma}{\varepsilon_r \varepsilon_0}
+			\tag{Electric Field just outside isolated conductor, 5-27}
+		\]
+		\[
+			C = \frac{\varepsilon_0 \varepsilon_r A}{d}
+			\tag{Parallel-Plate Capacitor, 5-28}
+		\]
+		\[
+			C = \frac{2 \pi \varepsilon_0 \varepsilon_r L}{\ln (b/a)}
+			\tag{Cylindrical Capacitor, 5-29}
+		\]
+		\[
+			C = 4 \pi \varepsilon_0 \varepsilon_r \frac{ab}{b - a}
+			\tag{Spherical Capacitor, 5-30}
+		\]
+		
+		
+		
+		\subsection*{5.6 Dielectrics: An Atomic View}
+		
+		
+		
+		
+		
+		
+		
 
 	\end{document}
