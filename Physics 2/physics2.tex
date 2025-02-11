@@ -1195,11 +1195,189 @@
 		
 		\section*{5. Capacitance}
 		
+		The \textbf{Capacitor} is a device capable of \textit{storing} electrical energy. \\
+		Its physics can be generalized to other devices or situations, for example, Earth's atmospheric electric field has same properties as a spherical capacitor. \\
+		The amount of electrical energy that a capacitor can store is called 
+		\textbf{capacitance}.\\
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4.2cm]{Physics2_PNGs/capacitor-scheme.png}
+			\caption*{}
+			\label{fig:capacitor-scheme.png}
+		\end{wrapfigure}
+		The basic elements of any capacitor are two isolated conductors that we call \textit{plates} regardless of their geometry. \\
+		A capacitor is \textit{charged} if its plates have have charges of equal magnitude but opposite signs: $+q$ and $-q$. However we refer to the charge of the capacitor as $q$, being it the absolute value of the charges on the plates (also $q$ is not the net charge, which is \textit{zero}). \\
+		There is a potential difference between the two plates, which, for historical reason, which value we refer to as $V$ in behalf of $\Delta V$. \\
+		The charge $q$ and the potential difference $V$ are proportional to each other 
+		($q \propto V$):
+		\begin{equation*}
+			q = CV
+			\tag{5-1}
+		\end{equation*}
+		In which the constant $C$ is called \textbf{capacitance} of the capacitor.
+		
+		The SI unit of capacitance is the coulomb per volt, referred to as \textit{farad} (F):
+		\[
+			1 \, \text{farad} = 1 \, \text{F} = 1 \, \text{coulomb per volt} = 1 \,
+			\text{C} / \text{V}
+			\tag{5-2}
+		\]
+		Usually in pratical applications, submultiples of the farad are more common \\
+		1 mF $= 10^{-3}$ F \\ 1 $\mu$F $= 10^{-6}$ F \\ 
+		1 nF $= 10^{-9}$ F \\ 1 pF $= 10^{-12}$ F		
+		
+		
+		\subsection*{5.1 Charging a Capacitor}
+		
+		\begin{wrapfigure}{r}{0.37\textwidth}
+			\centering
+			\includegraphics[width=8cm]{Physics2_PNGs/capacitor-charging.png}
+			\caption*{}
+			\label{fig:capacitor-charging.png}
+		\end{wrapfigure}
+		One way to charge a capacitor is to place it in a circuit with a \textit{battery} \\
+		In the figure, a battery \textbf{B}, a switch \textbf{S}, an uncharged capacitor \textbf{C} and interconnecting wires form a circuit. \\
+		The battery mantains a potential difference $V$ between its terminal, in which the positive terminal, with higher potential, is labeled + and the negative terminal, with lower potential, is labeled --. \\
+		When the switch S is open the circuit is said to be \textit{incomplete} (since the components aren't electrically connected and charge can't flow). If the switch is closed then the circuit is \textit{complete}. \\
+		When the plates of the capacitor are uncharged, its potential is \textit{zero}. As we close the switch S, the capacitor C begins to charge until its plates match the potential $V$ between the terminals in the battery. The capacitor is then said to be \textit{fully charged}. 
+		
+		
+		
+		\newpage
+		
+		\subsection*{5.2 Calculating Capacitance}
+		
+		The goal it's to calculate the capacitance of a capacitor once the geometry is known. In brief: (1) Assume charges $+q$ and $-q$ on the plates, (2) calculate electric field $\vec{E}$ between the plates in term of said charge, using Gauss' Law, (3) knowing $\vec{E}$ calculate potential $V$ between the plates, (4) calculate C using Eq. 5-1.
+		
+		\subsection*{5.2.1 Calculating Capacitance: Electric Field}
+		
+		To relate electric field $\vec{E}$ between platess of the capacitor on the charge $q$ on either plate, we use Gauss' Law:
+		\begin{equation*}
+			\varepsilon_0 \oint \vec{E} \cdot d\vec{A} = q
+			\tag{5-3}
+		\end{equation*}
+		We consider a gaussian surface such that $\vec{E}$ has uniform magnitude $E$ and vectos $\vec{E}$ and $\vec{A}$ will be parallel. 5-3 then reduces to:
+		\begin{equation*}
+			q = \varepsilon_0 E A 
+			\tag{5-4}
+		\end{equation*}
+			
+		\subsection*{5.2.2 Calculating Capacitance: Potential Difference}
+		
+		From Eq. 4-13 we know the potential difference between the plates of a capacitor is related to the field $\vec{E}$:
+		\begin{equation*}
+			V_f - V_i = - \int_{i}^{f} \vec{E} \cdot d\vec{A}
+			\tag{5-5}
+		\end{equation*}
+		in which the integral is evaluated along any path that starts on one plate and ends on the other. We choose a path that follows an electric field line, from negative (--) to positive (+) plate. For such path, $\vec{E} \cdot d\vec{A} = -E \, ds$. Letting $V = V_f - V_i$:
+		\begin{equation*}
+			V = \int_{-}^{+} E \, ds
+			\tag{5-6}
+		\end{equation*}
+		
+		
+		
+		\subsection*{5.2.3 Parallel-Plate Capacitor}
+			
+		\begin{wrapfigure}{r}{0.37\textwidth}
+			\centering
+			\includegraphics[width=5cm]{Physics2_PNGs/capacitor-charging-closeup.png}
+			\caption*{}
+			\label{fig:capacitor-charging-closeup.png}
+		\end{wrapfigure}
+		We assume that the plates of our parallel-plate capacitor are so large and so close together that we can neglect the fringing of the electric field at the edges of the plates. \\
+		We draw a Gaussian surface that encloses just $q$ on the positive plate. From Eq. 5-4 we can write:
+		\begin{equation*}
+			q = \varepsilon_0 EA
+			\tag{5-7}
+		\end{equation*}
+		Where A is the area of the plate. \\
+		Eq. 5-6 yields:
+		\begin{equation*}
+			V = \int_{-}^{+} E \, ds = E \int_{0}^{d} ds = Ed
+			\tag{5-8}
+		\end{equation*}
+		In which $d$ is just the plate separation distance. \\
+		If we now substitute $q$ from Eq. 5-7 and $V$ from Eq. 5-8 into the relation $q = CV$ (Eq. 5-1):
+		\[
+				C = \frac{\varepsilon_0 A}{d}
+				\tag{Parallel-Plate Capacitor, 5-9}
+		\]
+		This result allows us to express in a different way for problems involving capacitor, namely:
+		\[
+			\varepsilon_0 = 8.85 \cdot 10^{-12} \, \text{C}^2 / \text{N} \cdot \text{m}^2
+						  = 8.85 \cdot 10^{-12} \, \text{F/m} = 8.85 \, \text{pF/m}
+			\tag{5-10}
+		\]
+
+
+
+		\subsection*{5.2.4 Cylindrical Capacitor}
+
+		\begin{wrapfigure}{r}{0.37\textwidth}
+			\centering
+			\includegraphics[width=5cm]{Physics2_PNGs/cylindrical-capacitor.png}
+			\caption*{}
+			\label{fig:cylindrical-capacitor.png}
+		\end{wrapfigure}
+		As in figure, we have a cylindrical capacitor of length $L$ formed by two coaxial cylinders of radii $a$ and $b$. We assume $L \gg b$ so that we can neglect the fringing of the electric field that occurs at the ends of the cylinders. Each plate contains charge of magnitude $q$. \\
+		We choose a cylinder of length $L$ and radius $r$ as gaussian surface, coaxial with the cylinders and placed such that it encloses the central cylinder and its charge $q$. By relating charge and field magnitude $E$ with Eq. 5-4:
+		\[
+			q = \varepsilon_0 E A = \varepsilon_0 E (2 \pi r L)
+		\]
+		in which $2 \pi r L$ is the area of the curved part of the gaussian surface. There is no flux through end caps, therefore:
+		\[
+			E = \frac{q}{2 \pi \varepsilon_0 L r}
+			\tag{5-11}
+		\]
+		substituting into 5-6 yields:
+		\[
+			V = \int_{-}^{+} E ds 
+			  = - \frac{q}{2 \pi \varepsilon_0 L} \int_{b}^{a} \frac{dr}{r}
+			  = \frac{q}{2 \pi \varepsilon_0 L} \ln \frac{b}{a}  
+			  \tag{5-12}
+		\]
+		where we used $ds = -dr$ (we integrated radially). \\
+		From the relation $C = qV$:
+		\begin{equation*}
+			C = 2 \pi \varepsilon_0 \, \frac{L}{\ln (b/a)}
+			\tag{Cylindrical Capacitor, 5-13}
+		\end{equation*}
+		
+		
+		
+		\subsection*{5.2.5 Spherical Capacitor}
+		
+		Capacitor consisting of two concentric spherical shells, of radii $a$ and $b$. As gaussian surface we draw a sphere of radius $r$ concentric with the two shells, Eq. 5-4 yields:
+		\begin{equation*}
+			q = \varepsilon_0 E A = \varepsilon_0 E (4 \pi r^2)
+		\end{equation*}
+		in which $(4 \pi r^2)$ is the area of the spherical gaussian surface. By solving the equation for E we obtain:
+		\begin{equation*}
+			E = \frac{1}{4 \pi \varepsilon_0} \frac{q}{r^2}
+			\tag{5-14}
+		\end{equation*}
+		which is the electric field due to an uniform spherical distribution. By substituting into Eq. 5-6:
+		\begin{equation*}
+			V = \int_{-}^{+} E ds 
+			  = - \frac{q}{4 \pi \varepsilon_0} \int_{b}^{a} \frac{dr}{r^2} 
+			  = \frac{q}{4 \pi \varepsilon_0} \biggl( \frac{1}{a} - \frac{1}{b} \biggl)
+				  = \frac{q}{4 \pi \varepsilon_0} \frac{b - a}{ab}
+			\tag{5-15}
+		\end{equation*}		
+		where, again, $ds = -dr$. By substituting into Eq. 5-1 and solving for capacitance C:
+		\begin{equation*}
+			C = 4 \pi \varepsilon_0 \, \frac{ab}{b - a} 
+			\tag{Spherical Capacitor, 5-16}
+		\end{equation*}
+	
+	
+		
+		\subsection*{5.2.6 Isolated Sphere}
 		
 		
 		
 
-		
 
 
 	\end{document}
