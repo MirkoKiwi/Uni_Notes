@@ -20,6 +20,7 @@
 	\usepackage{subcaption}			   % subfigures functions
 %	\usepackage{subfig}				   % subfigures
 	\usepackage[many]{tcolorbox}       % For highlighting equations
+	\usepackage{circuitikz}			   % for resistor and similar symbols
 
 
 
@@ -1658,25 +1659,25 @@
 		\]
 		The current is the same in any cross section of said plane. \\ \\
 		The SI unit for current is the \textit{coulomb per second}, or \textit{ampere} (A) which is an SI base unit:
-		\[
-			1 \, \text{ampere} = 1 \, \text{A} = 1 \, \text{coulomb per second}
-			 = 1 \, \text{C} / \text{s}
-		\]
-		
-		
-		
-		\subsection*{6.1.1 Current is Conserved}
-		
 		\begin{wrapfigure}{r}{0.14\textwidth}
 			\centering
-			\includegraphics[width=4.5cm]{Physics2_PNGs/current-is-conserved.png}
+			\includegraphics[width=5cm]{Physics2_PNGs/current-is-conserved.png}
 			\caption*{}
 			\label{fig:current-is-conserved.png}
 		\end{wrapfigure}
+		
+		\[
+			1 \, \text{ampere} = 1 \, \text{A} = 1 \, \text{coulomb per second}
+			= 1 \, \text{C} / \text{s}
+		\]
+		
+		\subsection*{6.1.1 Current is Conserved}
+		
+
 		Current, as defined on 6-1, is a scalar because both charge and time are scalars in the equation. If a current $i_0$ is split in two branches in a junction, since \textit{charge is conserved}, the magnitudes of the currents in the branches must add to match the current in the original conductor, therefore
 		\[
-			i_0 = i_1 + 1_2
-			\tag{6-3}
+			i_0 = i_1 + i_2
+			\tag{First Law of Kirchhoff, 6-3}
 		\]
 		
 		
@@ -1691,6 +1692,181 @@
 		\newpage
 		
 		\subsection*{6.2 Current Density}
+		
+		\begin{wrapfigure}{r}{0.14\textwidth}
+			\centering
+			\includegraphics[width=4cm]{Physics2_PNGs/curr-density.png}
+			\caption*{}
+			\label{fig:curr-density.png}
+		\end{wrapfigure}
+		The flow of charge $i$ in a particolar point of a conductor can be described by the \textbf{current density} $\vec{J}$, which has same direction as the velocity of the moving charges if they are \textit{positive}, opposite direction if they are \textit{negative}. \\
+		We can write the amount of current through the element as 
+		$\vec{J} \cdot d\vec{A}$ where the area vector $d\vec{A}$ is perpendicular to the element. The total current through the surface is then:
+		\begin{equation*}
+			i = \int \vec{J} \cdot d\vec{A}
+			\tag{6-4}
+		\end{equation*}
+		If the current is uniform across the surface and parallel to $d\vec{A}$, then $\vec{J}$ is also uniform and parallel. Eq. 6-4 becomes:
+		\[
+			i = \int J \, dA = J \int dA = JA
+		\]
+		therefore
+		\[
+			J = \frac{i}{A}
+			\tag{6-5}
+		\]
+		where A is the total area of the surface. \\
+		The SI unit for \textit{current density} is ampere per square meter (A/m$^2$).
+		
+		
+		
+		\subsection*{6.2.1 Drift Speed}
+		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=5cm]{Physics2_PNGs/drift-speed.png}
+			\caption*{}
+			\label{fig:drift-speed.png}
+		\end{wrapfigure}
+		Without any kind of current, electrons move randomly with no net motion in any direction (with speed $v_{\text{eff}} \approx 10^6$ m$^2$/s). \\
+		When a conductor does have a current instead, they tend to \textit{drift} with a \textbf{drift speed} $v_d \approx 10^{-5}$ m/s. \\
+		
+		We now relate the drift speed $v_d$ of the conduction electrons in a current through a wire to the magnitude $J$ of the current density in the wire. \\
+		We take a wire of length $L$, with cross-section area $A$. The number of charge carriers in a length $L$ of the wire is $nAL$ (where $n$ is the number of \textit{carriers} per unit volume). The total charge of such carriers, each with charge $e$ is then:
+		\[
+			q = (nAL)e
+		\]
+		Since all the carriers move along the wire with speed $v_d$, this total charge moves across any section in a time interval:
+		\[
+			t = \frac{L}{v_d}
+		\]
+		Eq. 6-1 tells us that electric current is, by definition $i = q / t$, therefore:
+		\[
+			i = \frac{q}{t} = \frac{n A L e}{L / v_d} = n A e v_d
+			\tag{6-6}
+		\]
+		by solving for $v_d$ and recalling Eq. 6-5 ($J = i / A$):
+		\[
+			v_d = \frac{i}{nAe} = \frac{J}{ne}
+		\]
+		or, extended to vector form:
+		\begin{equation}
+			\vec{J} = (ne) \vec{d}_d
+			\tag{6-7}
+		\end{equation}
+		In which \textit{carrier charge density} ($ne$) SI unit is coulomb per cubic meter (C/m$^3$). \\
+		$\vec{J}$ and $\vec{v_d}$ have same direction if $ne$ is \textit{positive}, opposite directions if $ne$ is \textit{negative}.
+		
+		
+		
+		\subsection*{6.3 Resistance and Resistivity}
+		
+		By applying a potential difference through a conductor, there will be a resultant electric current which will be different for any conductor. \\
+		The characteristic of such conductor is called electrical \textbf{resistance}.
+		\[
+			R \triangleq \frac{V}{i}
+			\tag{Definition of Electrical Resistance, \textbf{Ohm's Law}, 6-8}
+		\]	
+		The SI unit for resistance is the volt per ampere. This combination has a special name, which is the \textbf{ohm} (symbol $\Omega$). That is:
+		\[
+			1 \, \text{ohm} = 1 \, \Omega = 1 \text{volt per ampere} = 1 \, \text{V/A}
+			\tag{6-9}
+		\]
+		A conductor whose function in a circuit is to provide a resistance is called \textbf{resistor} and in a diagram has symbol 
+		\begin{circuitikz}
+			\draw (0,0) to[R] (2,0);
+		\end{circuitikz}
+		, we can rewrite 6-8 as:
+		\[
+			i = \frac{V}{R} \quad \quad \quad \text{or} \quad \quad \quad V = iR
+		\]
+		
+		
+		
+		\subsection*{6.3.1 Resistivity and Conductivity}
+		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=5cm]{Physics2_PNGs/resistivities-table.png}
+			\caption*{}
+			\label{fig:resistivities-table.png}
+		\end{wrapfigure}
+		The potential $V$ through both ends of a resistor corresponds locally to an electric field $\vec{E}$. Instead of dealing with the current $i$ through the resistor, we deal with the current density $\vec{J}$ at the needed point. \\
+		Instead of the resistance $R$, we deal with the \textbf{resistivity} $\rho$ oof the material:
+		\[
+			\rho \triangleq \frac{E}{J}
+			\tag{Definition of Resistivity, 6-10}
+		\]
+		If we combine the SI units of $E$ and $J$, we get forr the unit of $\rho$ the \textit{ohm-meter} ($\Omega$ $\cdot$ m):
+		\[
+			\frac{\text{unit}(E)}{\text{unit}(J)} = \frac{\text{V/m}}{\text{A/m}^2}
+			 = \frac{V}{A} m = \Omega \cdot \text{m}
+		\]
+		We can rewrite Eq. 6-10 in vector form as:
+		\[
+			\vec{E} = \rho \vec{J}
+			\tag{Ohm's Law, 6-11}
+		\]
+		The \textbf{conductivity} $\sigma$, which is the reciprocal of the resistivity, is a measure of how ``well'' a material can conduct electricity:
+		\[
+			\sigma \triangleq \frac{1}{\rho}
+			\tag{Definition of Conductivity, 6-12}
+		\]
+		Its SI unit is the reciprocal ohm-meter ($\Omega$ $\cdot$ m)$^{-1}$, which is also referred as \textit{mho per meter} ($\mho$/m) or \textit{Siemens per meter} (S/m). \\
+		We can rewrite 6-11 as
+		\[
+			\vec{J} = \sigma \vec{E}
+			\tag{6-13}
+		\]
+		
+		
+		
+		\newpage
+		
+		\subsection*{6.3.2 Calculating Resistance from Resistivity}
+		
+		\begin{wrapfigure}{r}{0.22\textwidth}
+			\centering
+			\includegraphics[width=6cm]{Physics2_PNGs/elec-wire-imm.png}
+			\caption*{}
+			\label{fig:elec-wire-imm.png}
+		\end{wrapfigure}
+		Resistance is a property of an object. \\
+		Resistivity is a property of a material. \\\\
+		Let $A$ be the cross-sectional area of a wire of length $L$, and let a potential difference $V$ exist between its ends.
+		If the streamlines representing the current density are uniform throughout the wire, then the electric field and the current density will be constant at all points within the wire. \\
+		We know that $E = V/L$ and $J = i/A$, by combining them:
+		\[
+			\rho = \frac{E}{J} = \frac{V/L}{i/A}
+			\tag{6-14}
+		\]
+		However $V/i$ is the resistance $R$, this allows us to recast 6-14 as
+		\[
+			\rho = \frac{VA}{iL} \quad \rightarrow \quad  
+			\rho = R \frac{A}{L} \quad \rightarrow \quad 
+			R = \rho \frac{L}{A}
+			\tag{6-15}
+		\]
+		Which can only be applied to homogeneous isotropi conductors of uniform cross section.
+		
+		
+		
+		\subsection*{6.3.3 Variation with Temperature}
+		
+		Resistivity vary with temperature, as most physical properties do. The relation between temperature and resistivity for most metal is fairly (almost) linear over a rather broad temperature range. \\
+		We can write an empirical approximation:
+		\[
+			\rho - \rho_0 = \rho_0 \alpha ( T - T_0 )
+			\tag{6-16}
+		\]
+		$T_0$ is a reference temperature (usually $T_0 = 293$K, room temperature) for which $\rho_0 = 1.69 \cdot 10^{-8}$. \\
+		$\alpha$ is called \textit{temperature coefficient of resistivity}.
+		
+		
+		
+		
+		\subsection*{6.4 Ohm's Law}
+		
 		
 		
 		
