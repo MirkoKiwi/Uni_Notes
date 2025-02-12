@@ -12,6 +12,7 @@
 	\usepackage{amsmath}               % great math stuff
 	\usepackage{amsfonts}              % for blackboard bold, etc
 	\usepackage{amsthm}                % better theorem environments
+	\usepackage{amssymb}               % math symbols
 	\usepackage{wrapfig}			   % for images formatting
 	\usepackage{booktabs}
 	\usepackage{caption}			   % for labeling images
@@ -1549,8 +1550,147 @@
 		
 		\subsection*{5.6 Dielectrics: An Atomic View}
 		
+		What happens at a molecular / atomic level? There are two possibilities, depending on the type of molecule:
+		\begin{itemize}
+			\item[1.]\textit{Polar dielectrics}: the molecules of some dielectrics have permanent electric dipole moment. In such materialsthe electric dipoles tend to line up with and external electric field.
+			\item[2.]\textit{Nonpolar dielectrics}: regardless of whether they have permanent dipole moments, molecules acquire dipole moment by induction when placed in an external electric field, we can say that the external electric field tends to ``stretch'' the molecules.
+		\end{itemize}
+		
+		\begin{figure}[!htbp]
+			\centering
+			\includegraphics[width=10cm]{Physics2_PNGs/molecular-dipoles.png}
+			\caption*{}
+			\label{fig:molecular-dipoles.png}
+		\end{figure}	
+		When a nonpolar dielectric slab is placed in an external electric field (such as within a charged capacitor), the field causes a slight displacement of positive and negative charge centers within the material. This results in induced surface charges: \textit{positive} on one face and \textit{negative} on the opposite face, while the slab remains electrically neutral overall. These induced charges generate an internal electric field that opposes the applied field, reducing its net magnitude inside the dielectric. This behavior, observed in both polar and nonpolar dielectrics, weakens the effective electric field between capacitor plates, influencing capacitance. \\
+		The resulting field
+		\[
+			\vec{E} = \vec{E_0} + \vec{E'} = \frac{\vec{E}}{\varepsilon_r}
+		\]
+		will always be less intense than $\vec{E_0}$ by a factor $\varepsilon_r$.
 		
 		
+		
+		\newpage
+		
+		\subsection*{5.7 Dielectric and Gauss' Law}
+		
+		\begin{wrapfigure}{r}{0.2\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{Physics2_PNGs/gaussian-surf-dielecs.png}
+			\caption*{}
+			\label{fig:gaussian-surf-dielecs.png}
+		\end{wrapfigure}
+		We generalize Gauss' Law in presence of any dielectric. \\
+		We take a parallel-plate capacitor of plate area $A$ and we assume that the charge $q$ on the plates is the same. For a situation with no dielectric we can find the field $\vec{E_0}$ between the plates by enclosing the charge $+q$ with a Gaussian surface and then apply Gauss' Law. Letting $\vec{E_0}$ be the magnitude of the field:
+		\[
+			\varepsilon_0 \oint \vec{E} \cdot d\vec{A} = \varepsilon_0 E A = q
+			\tag{5-31}
+		\]
+		or 
+		\[
+			E_0 = \frac{q}{\varepsilon_0 A}
+			\tag{5-32}
+		\]
+		If we consider the case with a dielectric involved, we can find the electric field by using the same Gaussian surface, however the surface now encloses two different type of charge: the charge $+q$ on the plate and the charge $-q'$ on the top face of the \textit{dielectric}. The charge on the conducting plate is said to be \textit{free charge} because it can move if we change the potential of the plate, while the induced charge on the dielectric is not free charge since it cannot move from that surface. \\
+		The net charge enclosed by the Gaussian surface is then $q - q'$, so Gauss Law' now gives
+		\[
+			\varepsilon_0 \oint \vec{E} \cdot d\vec{A} = \varepsilon_0 E A = q - q'
+			\tag{5-33}
+		\]
+		or
+		\[
+			E = \frac{q - q'}{\varepsilon_0 A}
+			\tag{5-34}
+		\]
+		The dielectric weakens the original field $E_0$ by a factor of $\varepsilon_r$, so we can write:
+		\[
+			E = \frac{E_0}{\varepsilon_r} = \frac{q}{\varepsilon_r \varepsilon_0 A}
+			\tag{5-35}
+		\]
+		by comparing 5-34 and 5-35 we obtain that
+		\[
+			q - q' = \frac{q}{\varepsilon_r}
+			\tag{5-36}
+		\]
+		By substituting for $q - q'$ into Eq. 5-31 we can write Gauss' law in the form:
+		\begin{equation*}
+			\varepsilon_0 \oint \varepsilon_r \vec{E} \cdot d\vec{A} = q
+			\tag{Gauss' Law with Dielectric, 5-37}
+		\end{equation*}
+		By introducing the \textit{electric displacement} 
+		$\vec{D} = \varepsilon_0 \varepsilon_0 \vec{E}$, and leaving the \textit{free charge} $q$ we can rewrite 5-37 in a more compact form:
+		\[
+			\oint \vec{D} \cdot d\vec{A} = q
+			\tag{Gauss' Law with Dielectric, 5-38}
+		\]
+		
+		
+		\newpage
+		
+		
+		\section*{6. Current and Resistance}
+		
+		
+		\subsection*{6.1 Electric Current}
+		
+		\begin{wrapfigure}{r}{0.14\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/elec-current.png}
+			\caption*{}
+			\label{fig:elec-current.png}
+		\end{wrapfigure}
+		Although an electric current is a stream of moving charges, not every moving charges constitute an electric current. In order to have an electric current through any surface, there must be a net flow of charge. 
+		Free electrons in a conductor have an effective speed of 
+		$v_{\text{eff}} \approx 10^6 m/s$, but there's no \textit{net transport of charge}. \\
+		Any isolated conducting loop, then has all same potential, thus no electric current. \\ 
+		If we insert a battery in the loop, an \textit{Electric Field} is estabilished and acts on the material making up the loop, exerting forces onto the electrons, generating an \textit{electric current}. After an amount of time, the electron flow reaches a constant value and the current reaches a \textit{steady state}. \\
+		If a charge $dq$ passes through an hypothetical plane in time $dt$, then the current $i$ going across that plane is defined as:
+		\begin{equation*}
+			i \triangleq \frac{dq}{dt}
+			\tag{Definition of Current, 6-1}
+		\end{equation*}
+		We can find the charge that passes through the plane in a time interval
+		($dq = i \, dt$) by integration:
+		\[
+			q = \int dq = \int_{0}^{t} i \, dt
+			\tag{6-2}
+		\]
+		The current is the same in any cross section of said plane. \\ \\
+		The SI unit for current is the \textit{coulomb per second}, or \textit{ampere} (A) which is an SI base unit:
+		\[
+			1 \, \text{ampere} = 1 \, \text{A} = 1 \, \text{coulomb per second}
+			 = 1 \, \text{C} / \text{s}
+		\]
+		
+		
+		
+		\subsection*{6.1.1 Current is Conserved}
+		
+		\begin{wrapfigure}{r}{0.14\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/current-is-conserved.png}
+			\caption*{}
+			\label{fig:current-is-conserved.png}
+		\end{wrapfigure}
+		Current, as defined on 6-1, is a scalar because both charge and time are scalars in the equation. If a current $i_0$ is split in two branches in a junction, since \textit{charge is conserved}, the magnitudes of the currents in the branches must add to match the current in the original conductor, therefore
+		\[
+			i_0 = i_1 + 1_2
+			\tag{6-3}
+		\]
+		
+		
+		\subsection*{6.1.2 Directions of Currents}
+		
+		The direction of a current is the one in which the \textit{positive charges} would be carried, even if the effective \textbf{charge carriers} are \textit{negative} and move in the \textit{opposite direction}. \\
+		In almost every situation, a positive charge in movement $+ \hat{x}$ has the same effect as the actual motion of negative charge in the opposite direction 
+		$- \hat{x}$.
+		
+		
+		
+		\newpage
+		
+		\subsection*{6.2 Current Density}
 		
 		
 		
