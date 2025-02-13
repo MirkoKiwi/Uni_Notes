@@ -1867,6 +1867,60 @@
 		
 		\subsection*{6.4 Ohm's Law}
 		
+		A resistor is a conductor with a specified resistance, which is independent from any magnitude and direction (polarity) of the applied potential difference. \\ \\
+		\textbf{Ohm's Law} is an assertion that the current through a device is \textit{always} directly proportional to the potential difference applied to the device. \\ \\
+		Eventhough --for historical reason-- it's called law, not every device obeys it, for example, many semiconductors do \textit{not} obey Ohm's Law, since they do \textit{not} have constant resistance. \\\\
+		A conducting \textbf{device} obeys Ohm's Law when the resistance of such device is independent of the magnitude polarity of the applied potential difference. 
+		(if $\, \, V \propto i \quad$ and $\quad R = \frac{V}{i}$). \\ \\
+		A conducting \textbf{material} obeys Ohm's Law when its resistivity is independent of the magnitude and direction of the applied electric field. (if $\, \, E \propto J \quad$ and $\quad \rho = \frac{E}{J}$).
+		
+		
+		
+		\subsection*{6.5 A Microscopic View of Ohm's Law}
+		
+		To find out why any particular material obeys Ohm's law, we must look into details at an atomic level. We consider only metals and we base the analysis on the free-electron model, in which we assume the conduction electrons can move freely troughout the volume of a sample, in a similar way to the molecules of a gas in a closed container. We also assume that the electrons do not collide with each other but do collide only with the atoms of the metal. \\
+		After every collision the electron moves in a \textbf{random direction}. \\
+		The motion of conducting electrons is an electric field $\vec{E}$, therefore a combination of the motion due to \textit{random collisions} and due to $\vec{E}$. If we consider all the free electrons, their drift speed is \textit{zero} and it only depends on the field $\vec{E}$.
+		\\ 
+		An electron of mass $m$, placed in an electric field of magnitude $E$ will experience an acceleration given by Newton's Second Law:
+		\[
+			a = \frac{F}{m} = \frac{eE}{m}
+			\tag{6-17}
+		\]
+		In an average time $\tau$ between collisions, the average electron will acquire a drift speed $v_d = a \tau$. Then 6-17 becomes:
+		\[
+			v_d = a \tau = \frac{e E \tau}{m}
+			\tag{6-18}			
+		\]
+		Combining this result with $\vec{J} = n e \vec{v_d}$, in magnitude form, yields:
+		\[
+			v_d = \frac{J}{n e} \quad \rightarrow \quad \frac{J}{n e} = \frac{e E \tau}{m}
+			\tag{6-19}
+		\]
+		which, rewritten in terms of $E$:
+		\[
+			E = \biggl( \frac{m}{e^2 n \tau} \biggl) J
+			\tag{6-20}
+		\]
+		comparing this with $\vec{E} = \rho \vec{J}$, in magnitude form leads to:
+		\[
+			\rho J = \biggl( \frac{m}{e^2 n \tau} \biggl) J \quad
+			\rightarrow \quad \rho = \frac{m}{e^2 n \tau}
+			\tag{6-21}
+		\]
+		We just showed that, for metals, their resistivity $\rho$ is a constant independent of the strength of the applied field $\vec{E}$. We can also assume that the number of electron $n$ is independent from the field, and $m$ and $e$ are constants. Also $\tau$ can be considered constant for this purpose, since the drift speed $v_d$ (caused by the field) is much smaller than the effective speed $v_{\text{eff}}$, therefore $\tau$ is hardly affected by the field. 
+		
+		
+		
+		\subsection*{6.6 Power in Electric Circuits}
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
