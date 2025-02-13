@@ -21,8 +21,15 @@
 %	\usepackage{subfig}				   % subfigures
 	\usepackage[many]{tcolorbox}       % For highlighting equations
 	\usepackage{circuitikz}			   % for resistor and similar symbols
+	\usepackage{mathrsfs}			   % math letters
 
 
+	% Fancy E for emf ℰ
+	\DeclareFontFamily{U}{calligra}{}
+	\DeclareFontShape{U}{calligra}{m}{n}{<->callig15}{}
+	
+	\newcommand{\calE}{{\!\!\text{\usefont{U}{calligra}{m}{n}E}\,\,}}
+	%%%%
 
 	% various theorems, numbered by section
 	
@@ -1970,6 +1977,14 @@
 		
 		\section*{7. Circuits}
 		
+		In order to make charge carriers flow through a resistor you must estabilish a potential difference $V$ between the ends of the device. We can achieve this by connecting a resistor to the ends of a capacitor plate, but a capacitor would discharge pretty quickly. \\
+		To produce a steady flow, we need a ``charge pump'' a device that, by doing work on the charge carriers, maintains a constant potential difference $V$ between the terminals of the device. 
+		\\ We call such device \textbf{emf device} and it is said to produce an \textbf{emf} \textbf{\calE}. \\
+		A common emf device is the battery.
+		
+		
+		
+		\subsection*{7.1 Work, Energy and Emf}
 		
 		
 		
