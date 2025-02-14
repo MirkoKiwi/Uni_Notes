@@ -1986,11 +1986,147 @@
 		
 		\subsection*{7.1 Work, Energy and Emf}
 		
+		\begin{wrapfigure}{r}{0.20\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{Physics2_PNGs/emf-device.png}
+			\caption*{}
+			\label{fig:emf-device.png}
+		\end{wrapfigure}
+		When an emf device is not connected to a circuit, no net flow is produced. However, when connected to a circuit, the internal chemistry of the device causes a net flow of positive charge carriers from the negative (--) to the positive (+) terminal of such device. \\
+		Thus there must be some source of energy within the device, enabling it to do work on the charges and forcing them to move. \\
+		If we analyze the circuit in figure, in any time $dt$ a charge $dq$ passes through any cross section of this circuit, such as $aa'$. This amount must enter the emf device at its low-potential end and leave at its high-potential end. \\
+		The device must do an amount of work $dW$ on the charge $dq$ to force its movement.
+		Therefore we define the emf \calE as:
+		\[
+			\calE = \frac{dW}{dq}
+			\tag{Definition of \calE, 7-1}
+		\]
+		Its unit in term of SI is the Volt [V], or J/C.
+		
+		\subsection*{7.2 Calculating Current in a Single-Loop Circuit}
+		
+		\begin{wrapfigure}{r}{0.20\textwidth}
+			\centering
+			\includegraphics[width=5cm]{Physics2_PNGs/single-loop-circuit.png}
+			\caption*{}
+			\label{fig:single-loop-circuit.png}
+		\end{wrapfigure}
+		We now discuss two equivalent methods to calculate the current in a simple single-loop circuit. \\
+		The circuit consists of a battery B with emf \calE, a resistor of resistance $R$ and two connecting wires, with negligible resistance.
+		
+		
+		
+		\subsection*{7.2.1 Energy Method}
+		
+		$P = i^2 R$ tells us that in a time interval $dt$ an amount of energy given by $i^2 R$ will appear in the resistor as thermal energy, which is said to be \textit{dissipated}. In the same interval a charge $dq = i \, dt$ will have moved through battery B, and the work that the battery will do on such charge is:
+		\[
+			dW = \calE \, dq = \calE i \, dt
+		\]
+		from the principle of conservation of energy, the work energy done must equal the thermal energy in the resistor:
+		\[
+			\calE i \, dt = i^2 R \, dt
+		\]
+		This gives us 
+		\[
+			\calE = i R
+		\]
+		By arranging for electric current $i$:
+		\[
+			i = \frac{\calE}{R}
+			\tag{7-2}
+		\]
+		
+		
+		\subsection*{7.2.2 Potential Method}
+		
+		\textbf{Loop Rule}: The algebrahic sum of the charges in a potential encountered in a complete trasversal of any loop of a circuit must be \textit{zero}. \\\\
+		This is often referred as \textit{Kirchhoff's loop rule}. \\
+		Let's start at point $a$, whose potential is $V_a$ and ``walk'' clockwise around the circuit until we are back to $a$. Since the battery is ideal the potential difference between its terminals is \calE, when we pass through the battery to the high potential terminal, the change in potential is +\calE.	When passing through the resistor however, the potential changes according to $V = iR$ and must decrease since we are moving from the higher potential side of the resistor. Thus, we have change in potential $-iR$. \\
+		We return to point $a$, aquiring potential $V_a$. Since we traversed the whole loop, the initial potential mus be equal to the final potential, therefore:
+		\[
+			V_a + \calE - iR = V_a \quad \rightarrow \quad \calE - iR = 0
+		\]
+		Solving for $i$ yields same result as earlier:
+		\[
+			i = \frac{\calE}{R}
+		\]
+		\textbf{Resistance Rule}: For a move through a resistance in the direction of the current, the change in potential is $-iR$; in the opposite direction $+iR$. \\\\
+		\textbf{EMF Rule}: For a move through a emf device in the direction of the emf arrow, the change in potential is +\calE; -\calE otherwise.
+		
+		
+		
+		
+		\subsection*{7.2.4 Internal Resistance}
+		
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=10cm]{Physics2_PNGs/internal-resistance.png}
+			\caption*{}
+			\label{fig:internal-resistance.png}
+		\end{figure}
+		Any real battery has an internal resistance $r$ due to conductor materials' resistance (that's why is an unremovable feature). We can, however, draw the battery as if it could be separated into an ideal battery of emf \calE and a resistor $R$. By applying Kirchhoff Loop Rule:
+		\[
+			\calE - ir - iR = 0
+			\tag{7-3}
+		\]
+		solving for current $i$ we find:
+		\[
+			i = \frac{\calE}{R + r}
+			\tag{7-4}
+		\]
+		
+		
+		
+		\subsection*{7.2.5 Resistances in Series}
+		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/resistances-in-series.png}
+			\caption*{}
+			\label{fig:resistances-in-series.png}
+		\end{wrapfigure}
+		When a potential difference $V$ is applied across resistances connected in series, the resistances have identical currents $i$. The sum of the potential differences across the resistances is equal to the applied difference $V$. \\
+		Resistance connected in series can be replaced by an equivalent $R_{eq}$ that has the same current $i$ and same \textit{total} potential difference $V$ as the actual resistance. \\\\
+		We can derive an expression for $R_{eq}$ by using Kirchhoff's law:
+		\[
+			\calE - iR_1 - iR_2 - iR_3 = 0
+		\]
+		or, in terms of $i$:
+		\[
+			i = \frac{\calE}{R_1 + R_2 + R_3}
+			\tag{7-5}
+		\]
+		By replacing $R_{eq} = R_1 + R_2 + R_3$:
+		\[
+			\calE - iR_{eq} = 0 \quad \quad \quad \text{or} \quad \quad \quad i = \frac{\calE}{R_{eq}}
+			\tag{7-6}
+		\]
+		By extension to $n$ resistances:
+		\[
+			R_{eq} = \sum_{j=1}^{n} R_j
+			\tag{\textit{n} Resistances in Series, 7-7}
+		\]
+		
+		
+		
+		
+		\subsection*{7.2.6 Grounding a Circuit}
+		
+		Grounding a circuit means connecting one part of the circuit to a reference point in the physical ground (earth) or to a conductive body that serves as a common return path. This reference point is called the "ground" which has potential $V = 0$ and has symbol   
+		\begin{circuitikz} 
+			\draw (0,-1) -- (0,-1) node[ground]{};  
+		\end{circuitikz}  
+		in diagrams. It provides a stable voltage level for the entire circuit.
+		
+		
+		
+		\subsection*{7.3 Multiloop Circuits}
 		
 		
 		
 		
 		
+		 
 		
 
 	\end{document}
