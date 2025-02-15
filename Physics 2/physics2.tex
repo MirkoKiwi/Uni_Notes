@@ -22,6 +22,7 @@
 	\usepackage[many]{tcolorbox}       % For highlighting equations
 	\usepackage{circuitikz}			   % for resistor and similar symbols
 	\usepackage{mathrsfs}			   % math letters
+	\usepackage{tabularx}
 
 
 	% Fancy E for emf ℰ
@@ -2122,11 +2123,123 @@
 		
 		\subsection*{7.3 Multiloop Circuits}
 		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/multi-loop.png}
+			\caption*{}
+			\label{fig:multi-loop.png}
+		\end{wrapfigure}
+		In figure we have a circuit containing two loops, with two \textit{junctions} $b$ and $d$ with three \textit{branches} connecting them. \\ \\
+		\textbf{Junction Rule}: The sum of the currents entering any junction must be equal to the sum of the currents leaving that junction. \\
+		Also called \textit{Kirchhoff's First Law}. \\ \\
+		We consider the junction $d$, by applying Kirchoff's First Law:
+		\[
+			i_1 + i_3 = i_3
+			\tag{7-8}
+		\]
+		Our basic tools to solve complex circuits are the \textit{loop rule} (based on conservation of energy) and the \textit{junction rule} (based on conservation of charge). \\
+		To solve this circuit we apply the junction rule twice: \\
+		If we traverse the left-hand loop in a counterclockwise direction from point $b$:
+		\[
+			\calE_1 - i_1 R_1 + i_3 R_3 = 0
+			\tag{7-9}
+		\]
+		If we traverse the right-hand loop in a counterclockwise direction from point $b$: 
+		\[
+			- i_3 R_3 - i_2 R_2 - \calE_2 = 0
+			\tag{7-10}
+		\]
+		We're now left with three equations (7-8, 7-9, 7-10) with three unknown currents, that can be solved in different ways.
+		
+		
+		
+		\subsection*{7.3.1 Resistances in Parallel}
+ 		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/parallel-resistances.png}
+			\caption*{}
+			\label{fig:parallel-resistances.png}
+		\end{wrapfigure}
+		When a potential difference $V$ is applied across resistances connected in parallel, the resistances all have that same potential difference $V$. \\
+		Resistances connected in parallel can be replaced with an equivalent resistance $R_{eq}$ that has the same potential difference $V$ and the same total current $i$ as the actual resistances.
+		\\ \\
+		We can derive an expression for $R_{eq}$ by evaluating the currents in the figure, first:
+		\[
+			i_1 = \frac{V}{R_1}, \quad i_2 = \frac{V}{R_2}, \quad i_3 = \frac{V}{R_3}
+		\]
+		where $V$ is the potential difference between $a$ and $b$. If we apply junction rule at point $a$ and then substitute the values for current:
+		\[
+			i = i_1 + i_2 + i_3 = V \, \biggl( \frac{1}{R_1} + \frac{1}{R_2} +
+					                                    \frac{1}{R_3} \biggl)
+			\tag{7-11}
+		\]
+		The equivalent resistance $R_{eq}$ is then:
+		\[
+			i = \frac{V}{R_{eq}} \quad \quad \text{or} \quad \quad
+			\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}
+			\tag{7-12}
+		\]
+		Extending this result to $n$ parallel resistances:
+		\[
+			\frac{1}{R_{eq}} = \sum_{j=1}^{n} \frac{1}{R_j}
+			\tag{\textit{n} Resistances in Parallel, 7-13}
+		\]
+		For the case of just \textit{two} resistances:
+		\[
+			R_{eq} = \frac{R_1 R_2}{R_1 + R_2}
+			\tag{7-14}
+		\]	
+		\newpage
+		
+		\begin{table}[h]
+			\centering
+			\renewcommand{\arraystretch}{1.5} % Adjust row height
+			\setlength{\tabcolsep}{5pt} % Reduce column spacing
+			\begin{tabularx}{\textwidth}{|X|X|X|X|}
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Resistors}} & \multicolumn{2}{c|}{\textbf{Capacitors}} \\
+				\hline
+				\textbf{Series} & \textbf{Parallel} & \textbf{Series} & \textbf{Parallel} \\
+				\hline
+				$ R_{\text{eq}} = \sum\limits_{j=1}^{n} R_j $ & 
+				$ \frac{1}{R_{\text{eq}}} = \sum\limits_{j=1}^{n} \frac{1}{R_j} $ & 
+				$ \frac{1}{C_{\text{eq}}} = \sum\limits_{j=1}^{n} \frac{1}{C_j} $ & 
+				$ C_{\text{eq}} = \sum\limits_{j=1}^{n} C_j $ \\
+				\hline
+				Same current through all resistors & 
+				Same potential difference across all resistors & 
+				Same charge on all capacitors & 
+				Same potential difference across all capacitors \\
+				\hline
+			\end{tabularx}
+		\end{table}
 		
 		
 		
 		
+		\subsection*{7.4 Ammeter and Voltmeter}
 		 
+		To measure current, the wire must be interrupted, and the ammeter must be inserted.
+		Its resistance $R_A$ must be very small to avoid altering the circuit. \\\\
+		To measure potential differences, the electrodes of the voltmeter must be connected without interrupting the circuit.
+		Its resistance $R_V$​ must be very large to avoid altering the circuit.
 		
+		
+		
+		\subsection*{7.5 RC Circuits}
+		
+		\subsection*{7.5.1 Charging a Capacitor}
+	
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/RC-circuit-png.png}
+			\caption*{}
+			\label{fig:RC-circuit-png.png}
+		\end{wrapfigure}
+		Capacitor of capacitance $C$, initially uncharged. To charge it we close switch S on point $a$. This completes an $RC$ \textit{series circuit} consisting of a capacitor, an ideal battery of emf \calE and a resistance $R$. \\
+		
+	
+	
 
 	\end{document}
