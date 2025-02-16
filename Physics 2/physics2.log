@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  16 FEB 2025 01:19
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  16 FEB 2025 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,22 +689,22 @@ File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
 (./physics2.aux)
 \openout1 = `physics2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -742,18 +742,18 @@ LaTeX Font Info:    ... okay on input line 51.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 57
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 54
 .
 
 (c:/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -772,7 +772,7 @@ File: Physics2_PNGs/elec-dipole.png Graphic file (type bmp)
 <Physics2_PNGs/elec-dipole.png>
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 189.
+LaTeX Font Warning: Command \small invalid in math mode on input line 186.
 
 
 
@@ -780,17 +780,17 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 189.
 File: Physics2_PNGs/elec-line-charge.png Graphic file (type bmp)
 <Physics2_PNGs/elec-line-charge.png>
 
-Overfull \hbox (59.46646pt too wide) in paragraph at lines 240--241
+Overfull \hbox (59.46646pt too wide) in paragraph at lines 237--238
  [][] 
  []
 
 
-Underfull \hbox (badness 3179) in paragraph at lines 241--241
+Underfull \hbox (badness 3179) in paragraph at lines 238--238
 []\TU/lmr/m/n/12 Figure 3: |A Ring
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 241--241
+Underfull \hbox (badness 3780) in paragraph at lines 238--238
 \TU/lmr/m/n/12 of Uniform Positive
  []
 
@@ -804,12 +804,12 @@ File: Physics2_PNGs/electric-line-charge.png Graphic file (type bmp)
 File: Physics2_PNGs/elec-charged-disk.png Graphic file (type bmp)
 <Physics2_PNGs/elec-charged-disk.png>
 
-Underfull \hbox (badness 4819) in paragraph at lines 330--330
+Underfull \hbox (badness 4819) in paragraph at lines 327--327
 []|\TU/lmr/m/n/12 Figure 5: A disk
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 330--330
+Underfull \hbox (badness 7133) in paragraph at lines 327--327
 \TU/lmr/m/n/12 of uniform positive
  []
 
@@ -828,12 +828,12 @@ File: Physics2_PNGs/elec-veloc-flux.png Graphic file (type bmp)
 File: Physics2_PNGs/gaussian-elec-field.png Graphic file (type bmp)
 <Physics2_PNGs/gaussian-elec-field.png>
 
-Overfull \hbox (60.09464pt too wide) in paragraph at lines 470--471
+Overfull \hbox (60.09464pt too wide) in paragraph at lines 467--468
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--482
+Underfull \hbox (badness 10000) in paragraph at lines 477--479
 
  []
 
@@ -843,7 +843,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 480--482
 File: Physics2_PNGs/closed-cylinder.png Graphic file (type bmp)
 <Physics2_PNGs/closed-cylinder.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 529--535
+Underfull \hbox (badness 10000) in paragraph at lines 526--532
 
  []
 
@@ -853,50 +853,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 529--535
 File: Physics2_PNGs/gaussian-surf-lines.png Graphic file (type bmp)
 <Physics2_PNGs/gaussian-surf-lines.png>
 
-Overfull \hbox (36.80731pt too wide) in paragraph at lines 538--539
+Overfull \hbox (36.80731pt too wide) in paragraph at lines 535--536
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
 
  []
 
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 588--590
+Underfull \hbox (badness 10000) in paragraph at lines 585--587
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--595
+Underfull \hbox (badness 10000) in paragraph at lines 589--592
 
  []
 
 File: Physics2_PNGs/external-elec-field.png Graphic file (type bmp)
 <Physics2_PNGs/external-elec-field.png>
 
-Overfull \hbox (65.26007pt too wide) in paragraph at lines 602--603
+Overfull \hbox (65.26007pt too wide) in paragraph at lines 599--600
  [][] 
  []
 
 
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 629--630
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
 
  []
 
 File: Physics2_PNGs/planar-gauss-surf.png Graphic file (type bmp)
 <Physics2_PNGs/planar-gauss-surf.png>
 
-Overfull \hbox (36.80731pt too wide) in paragraph at lines 659--660
+Overfull \hbox (36.80731pt too wide) in paragraph at lines 656--657
  [][] 
  []
 
@@ -906,7 +906,7 @@ Overfull \hbox (36.80731pt too wide) in paragraph at lines 659--660
 File: Physics2_PNGs/two-conducting-plates.png Graphic file (type bmp)
 <Physics2_PNGs/two-conducting-plates.png>
 
-Overfull \hbox (65.26007pt too wide) in paragraph at lines 699--700
+Overfull \hbox (65.26007pt too wide) in paragraph at lines 696--697
  [][] 
  []
 
@@ -925,21 +925,21 @@ File: Physics2_PNGs/gauss-spherical-symm.png Graphic file (type bmp)
 File: Physics2_PNGs/electric-field-lines-surf.png Graphic file (type bmp)
 <Physics2_PNGs/electric-field-lines-surf.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 864--877
+Underfull \hbox (badness 10000) in paragraph at lines 861--874
 
  []
 
 
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 910--912
+Underfull \hbox (badness 10000) in paragraph at lines 907--909
 
  []
 
 File: Physics2_PNGs/point-charge-potential.png Graphic file (type bmp)
 <Physics2_PNGs/point-charge-potential.png>
 
-Overfull \hbox (70.42514pt too wide) in paragraph at lines 921--922
+Overfull \hbox (70.42514pt too wide) in paragraph at lines 918--919
  [][] 
  []
 
@@ -949,7 +949,7 @@ Overfull \hbox (70.42514pt too wide) in paragraph at lines 921--922
 File: Physics2_PNGs/dipole-point-potential.png Graphic file (type bmp)
 <Physics2_PNGs/dipole-point-potential.png>
 
-Overfull \hbox (47.1719pt too wide) in paragraph at lines 973--974
+Overfull \hbox (47.1719pt too wide) in paragraph at lines 970--971
  [][] 
  []
 
@@ -959,7 +959,7 @@ Overfull \hbox (47.1719pt too wide) in paragraph at lines 973--974
 File: Physics2_PNGs/rod-continous.png Graphic file (type bmp)
 <Physics2_PNGs/rod-continous.png>
 
-Overfull \hbox (65.26007pt too wide) in paragraph at lines 1026--1027
+Overfull \hbox (65.26007pt too wide) in paragraph at lines 1023--1024
  [][] 
  []
 
@@ -969,29 +969,29 @@ Overfull \hbox (65.26007pt too wide) in paragraph at lines 1026--1027
 File: Physics2_PNGs/disk-continous.png Graphic file (type bmp)
 <Physics2_PNGs/disk-continous.png>
 
-Overfull \hbox (51.03369pt too wide) in paragraph at lines 1077--1078
+Overfull \hbox (51.03369pt too wide) in paragraph at lines 1074--1075
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1101
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1098
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1101
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1098
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1101
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1098
 
  []
 
 File: Physics2_PNGs/charge-in-elec-field.png Graphic file (type bmp)
 <Physics2_PNGs/charge-in-elec-field.png>
 
-Overfull \hbox (51.03369pt too wide) in paragraph at lines 1110--1111
+Overfull \hbox (51.03369pt too wide) in paragraph at lines 1107--1108
  [][] 
  []
 
@@ -1001,19 +1001,19 @@ Overfull \hbox (51.03369pt too wide) in paragraph at lines 1110--1111
 File: Physics2_PNGs/2-charges-potential.png Graphic file (type bmp)
 <Physics2_PNGs/2-charges-potential.png>
 
-Overfull \hbox (51.03369pt too wide) in paragraph at lines 1145--1146
+Overfull \hbox (51.03369pt too wide) in paragraph at lines 1142--1143
  [][] 
  []
 
 File: Physics2_PNGs/plot-charge-potential.png Graphic file (type bmp)
 <Physics2_PNGs/plot-charge-potential.png>
 
-Overfull \hbox (22.58093pt too wide) in paragraph at lines 1169--1170
+Overfull \hbox (22.58093pt too wide) in paragraph at lines 1166--1167
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1182
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1179
 
  []
 
@@ -1023,7 +1023,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1176--1182
 File: Physics2_PNGs/isolated-conduct-elec-field.png Graphic file (type bmp)
 <Physics2_PNGs/isolated-conduct-elec-field.png>
 
-Overfull \hbox (42.49777pt too wide) in paragraph at lines 1194--1195
+Overfull \hbox (42.49777pt too wide) in paragraph at lines 1191--1192
  [][] 
  []
 
@@ -1032,28 +1032,28 @@ Overfull \hbox (42.49777pt too wide) in paragraph at lines 1194--1195
 [23]
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-1214.
+1211.
 
 File: Physics2_PNGs/capacitor-scheme.png Graphic file (type bmp)
 <Physics2_PNGs/capacitor-scheme.png>
 
-Overfull \hbox (42.49777pt too wide) in paragraph at lines 1216--1217
+Overfull \hbox (42.49777pt too wide) in paragraph at lines 1213--1214
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1210--1219
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1216
 
  []
 
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 12
-19.
+16.
 
 File: Physics2_PNGs/capacitor-charging.png Graphic file (type bmp)
 <Physics2_PNGs/capacitor-charging.png>
 
-Overfull \hbox (60.02614pt too wide) in paragraph at lines 1246--1247
+Overfull \hbox (60.02614pt too wide) in paragraph at lines 1243--1244
  [][] 
  []
 
@@ -1073,7 +1073,7 @@ File: Physics2_PNGs/cylindrical-capacitor.png Graphic file (type bmp)
 File: Physics2_PNGs/parallel-capacitors.png Graphic file (type bmp)
 <Physics2_PNGs/parallel-capacitors.png>
 
-Overfull \hbox (67.17375pt too wide) in paragraph at lines 1410--1411
+Overfull \hbox (67.17375pt too wide) in paragraph at lines 1407--1408
  [][] 
  []
 
@@ -1083,12 +1083,12 @@ Overfull \hbox (67.17375pt too wide) in paragraph at lines 1410--1411
 File: Physics2_PNGs/series-capacitors.png Graphic file (type bmp)
 <Physics2_PNGs/series-capacitors.png>
 
-Overfull \hbox (65.89795pt too wide) in paragraph at lines 1442--1443
+Overfull \hbox (65.89795pt too wide) in paragraph at lines 1439--1440
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1492--1495
+Underfull \hbox (badness 10000) in paragraph at lines 1489--1492
 
  []
 
@@ -1098,17 +1098,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1492--1495
 File: Physics2_PNGs/dielectrics.png Graphic file (type bmp)
 <Physics2_PNGs/dielectrics.png>
 
-Overfull \hbox (43.13567pt too wide) in paragraph at lines 1525--1526
+Overfull \hbox (43.13567pt too wide) in paragraph at lines 1522--1523
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1534--1535
+Underfull \hbox (badness 10000) in paragraph at lines 1531--1532
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1534--1535
+Underfull \hbox (badness 10000) in paragraph at lines 1531--1532
 
  []
 
@@ -1123,7 +1123,7 @@ File: Physics2_PNGs/molecular-dipoles.png Graphic file (type bmp)
 File: Physics2_PNGs/gaussian-surf-dielecs.png Graphic file (type bmp)
 <Physics2_PNGs/gaussian-surf-dielecs.png>
 
-Overfull \hbox (65.89795pt too wide) in paragraph at lines 1589--1590
+Overfull \hbox (65.89795pt too wide) in paragraph at lines 1586--1587
  [][] 
  []
 
@@ -1133,29 +1133,29 @@ Overfull \hbox (65.89795pt too wide) in paragraph at lines 1589--1590
 File: Physics2_PNGs/elec-current.png Graphic file (type bmp)
 <Physics2_PNGs/elec-current.png>
 
-Overfull \hbox (64.62218pt too wide) in paragraph at lines 1648--1649
+Overfull \hbox (64.62218pt too wide) in paragraph at lines 1645--1646
  [][] 
  []
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-1670.
+1667.
 
 File: Physics2_PNGs/current-is-conserved.png Graphic file (type bmp)
 <Physics2_PNGs/current-is-conserved.png>
 
-Overfull \hbox (78.84856pt too wide) in paragraph at lines 1672--1673
+Overfull \hbox (78.84856pt too wide) in paragraph at lines 1669--1670
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1667--1675
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1672
 
  []
 
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 16
-75.
+72.
 
 
 
@@ -1163,30 +1163,30 @@ Package wrapfig Warning: Stationary wrapfigure forced to float on input line 16
 File: Physics2_PNGs/curr-density.png Graphic file (type bmp)
 <Physics2_PNGs/curr-density.png>
 
-Overfull \hbox (50.3958pt too wide) in paragraph at lines 1706--1707
+Overfull \hbox (50.3958pt too wide) in paragraph at lines 1703--1704
  [][] 
  []
 
 File: Physics2_PNGs/drift-speed.png Graphic file (type bmp)
 <Physics2_PNGs/drift-speed.png>
 
-Overfull \hbox (65.26007pt too wide) in paragraph at lines 1735--1736
+Overfull \hbox (65.26007pt too wide) in paragraph at lines 1732--1733
  [][] 
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 1739--1741
+Underfull \hbox (badness 4582) in paragraph at lines 1736--1738
 []\TU/lmr/m/n/12 Without any kind of current, electrons move randomly with
  []
 
 
-Underfull \hbox (badness 7362) in paragraph at lines 1739--1741
+Underfull \hbox (badness 7362) in paragraph at lines 1736--1738
 \TU/lmr/m/n/12 no net motion in any direction (with speed $\OML/cmm/m/it/12 v[]
  \OMS/cmsy/m/n/12 ^^Y \OT1/cmr/m/n/12 10[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1741
+Underfull \hbox (badness 10000) in paragraph at lines 1736--1738
 
  []
 
@@ -1196,7 +1196,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1739--1741
 File: Physics2_PNGs/resistivities-table.png Graphic file (type bmp)
 <Physics2_PNGs/resistivities-table.png>
 
-Overfull \hbox (65.26007pt too wide) in paragraph at lines 1798--1799
+Overfull \hbox (65.26007pt too wide) in paragraph at lines 1795--1796
  [][] 
  []
 
@@ -1206,32 +1206,32 @@ Overfull \hbox (65.26007pt too wide) in paragraph at lines 1798--1799
 File: Physics2_PNGs/elec-wire-imm.png Graphic file (type bmp)
 <Physics2_PNGs/elec-wire-imm.png>
 
-Overfull \hbox (71.06303pt too wide) in paragraph at lines 1838--1839
+Overfull \hbox (71.06303pt too wide) in paragraph at lines 1835--1836
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1842--1847
+Underfull \hbox (badness 10000) in paragraph at lines 1839--1844
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1878--1884
+Underfull \hbox (badness 10000) in paragraph at lines 1875--1881
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1878--1884
+Underfull \hbox (badness 10000) in paragraph at lines 1875--1881
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1878--1884
+Underfull \hbox (badness 10000) in paragraph at lines 1875--1881
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1878--1884
+Underfull \hbox (badness 10000) in paragraph at lines 1875--1881
 
  []
 
@@ -1241,14 +1241,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 1878--1884
 File: Physics2_PNGs/battery-circ.png Graphic file (type bmp)
 <Physics2_PNGs/battery-circ.png>
 
-Overfull \hbox (41.3345pt too wide) in paragraph at lines 1927--1928
+Overfull \hbox (41.3345pt too wide) in paragraph at lines 1924--1925
  [][] 
  []
 
 
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1949--1952
+Underfull \hbox (badness 10000) in paragraph at lines 1946--1949
 
  []
 
@@ -1258,26 +1258,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1949--1952
 File: Physics2_PNGs/emf-device.png Graphic file (type bmp)
 <Physics2_PNGs/emf-device.png>
 
-Overfull \hbox (65.89795pt too wide) in paragraph at lines 1992--1993
+Overfull \hbox (65.89795pt too wide) in paragraph at lines 1989--1990
  [][] 
  []
 
 File: Physics2_PNGs/single-loop-circuit.png Graphic file (type bmp)
 <Physics2_PNGs/single-loop-circuit.png>
 
-Overfull \hbox (51.67159pt too wide) in paragraph at lines 2011--2012
+Overfull \hbox (51.67159pt too wide) in paragraph at lines 2008--2009
  [][] 
  []
 
 
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 2043--2047
+Underfull \hbox (badness 10000) in paragraph at lines 2040--2044
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2053--2056
+Underfull \hbox (badness 10000) in paragraph at lines 2050--2053
 
  []
 
@@ -1289,35 +1289,35 @@ File: Physics2_PNGs/internal-resistance.png Graphic file (type bmp)
 File: Physics2_PNGs/resistances-in-series.png Graphic file (type bmp)
 <Physics2_PNGs/resistances-in-series.png>
 
-Overfull \hbox (51.03369pt too wide) in paragraph at lines 2085--2086
+Overfull \hbox (51.03369pt too wide) in paragraph at lines 2082--2083
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2089--2092
+Underfull \hbox (badness 10000) in paragraph at lines 2086--2089
 
  []
 
 File: Physics2_PNGs/multi-loop.png Graphic file (type bmp)
 <Physics2_PNGs/multi-loop.png>
 
-Overfull \hbox (51.03369pt too wide) in paragraph at lines 2128--2129
+Overfull \hbox (51.03369pt too wide) in paragraph at lines 2125--2126
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2132--2136
+Underfull \hbox (badness 10000) in paragraph at lines 2129--2133
 
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 2132--2136
+Underfull \hbox (badness 1924) in paragraph at lines 2129--2133
 \TU/lmr/bx/n/12 Junction Rule\TU/lmr/m/n/12 : The sum of the currents entering 
 any junc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2132--2136
+Underfull \hbox (badness 10000) in paragraph at lines 2129--2133
 
  []
 
@@ -1327,33 +1327,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 2132--2136
 File: Physics2_PNGs/parallel-resistances.png Graphic file (type bmp)
 <Physics2_PNGs/parallel-resistances.png>
 
-Overfull \hbox (51.03369pt too wide) in paragraph at lines 2160--2161
+Overfull \hbox (51.03369pt too wide) in paragraph at lines 2157--2158
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2164--2168
+Underfull \hbox (badness 10000) in paragraph at lines 2161--2165
 
  []
 
 
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 2215--2215
+Underfull \hbox (badness 10000) in paragraph at lines 2212--2212
 []|\TU/lmr/m/n/12 Same current
  []
 
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=t
 ex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 2223--2227
+Underfull \hbox (badness 10000) in paragraph at lines 2220--2224
 
  []
 
 File: Physics2_PNGs/RC-circuit-png.png Graphic file (type bmp)
 <Physics2_PNGs/RC-circuit-png.png>
 
-Overfull \hbox (51.03369pt too wide) in paragraph at lines 2236--2237
+Overfull \hbox (51.03369pt too wide) in paragraph at lines 2233--2234
  [][] 
  []
 
@@ -1363,7 +1363,7 @@ Overfull \hbox (51.03369pt too wide) in paragraph at lines 2236--2237
 File: Physics2_PNGs/charging-capacitor-graph.png Graphic file (type bmp)
 <Physics2_PNGs/charging-capacitor-graph.png>
 
-Overfull \hbox (36.80731pt too wide) in paragraph at lines 2268--2269
+Overfull \hbox (36.80731pt too wide) in paragraph at lines 2265--2266
  [][] 
  []
 
@@ -1371,7 +1371,9 @@ Overfull \hbox (36.80731pt too wide) in paragraph at lines 2268--2269
 
 [43]
 
-[44] (./physics2.aux)
+[44]
+
+[45] (./physics2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
@@ -1380,10 +1382,10 @@ L3 programming layer <2024-12-25>
 Here is how much of TeX's memory you used:
  38710 strings out of 475175
  996779 string characters out of 5757551
- 1622266 words of memory out of 5000000
+ 1622267 words of memory out of 5000000
  61233 multiletter control sequences out of 15000+600000
  575234 words of font info for 120 fonts, out of 8000000 for 9000
  374 hyphenation exceptions out of 8191
  98i,19n,107p,935b,692s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on physics2.pdf (44 pages).
+Output written on physics2.pdf (45 pages).

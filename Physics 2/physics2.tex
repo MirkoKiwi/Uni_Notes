@@ -3,9 +3,6 @@
 \title{Physics 2}
 \date{} 
 
-% This first part of the file is called the PREAMBLE. It includes
-% customizations and command definitions. The preamble is everything
-% between \documentclass and \begin{document}.
 	
 	\usepackage[margin=1in]{geometry}  % set the margins to 1in on all sides
 	\usepackage{graphicx}              % to include figures
@@ -2325,7 +2322,7 @@
 		Differentiating gives us the current $i(t)$:
 		\[
 			i = \frac{dq}{dt} = - \biggl( \frac{q_0}{RC} \biggl) e^{-t/RC}
-			\tag{Discharging a Capacitor, 7-25}
+			\tag{Discharging a Capacitor, 7-26}
 		\]
 		
 		
@@ -2334,6 +2331,58 @@
 		
 		\section*{8. Magnetic Fields}
 		
+		We know an \textit{electric field} $\vec{E}$ can produce an \textit{electric force} on a charged object. We might expect that a magnetic field $\vec{B}$ is produced by a magnetic charge, but \textit{magnetic monopoles} do not really exist. \\
+		There are two ways to produce a magnetic field: one way is to use moving electrically charged particles, such as currents in a wire, to make an \textbf{electromagnet}. \\ 
+		The other way is by means of elementary particles such as electrons since they have an \textit{intrinsic} magnetic field around them, in certain materials the addition of electrons together make a \textbf{permanent magnet}.
+		
+		
+		
+		\subsection*{8.1 Definition of $\vec{B}$}
+		
+
+		Since magnetic monopoles have not been found, the magnetic field is defined using the force exerted on a moving charged particle. By firing a charged particle with different velocities at a given point, we observe that:  
+		
+		\begin{itemize}
+			\item When the velocity $\vec{v}$ is along a certain axis, the force $\vec{F_B}$ is zero.  
+			
+			\item For other directions, the magnitude of $\vec{F_B}$ is always proportional to $v \, \sin \phi$ \\( $\mathbf{F_B} \propto v \, \sin \phi$ ), where $\phi$ is the angle between $\vec{v}$ and the zero-force axis.  
+			
+			\item The force $\vec{F_B}$ is always perpendicular to $\vec{v}$, indicating a cross product relationship. 
+		\end{itemize}
+	
+		
+		Thus, the \textbf{magnetic field} $\vec{B}$ is defined as a vector along the zero-force axis, with magnitude determined by:  
+		
+		\[
+			\mathbf{B} = \frac{F_B}{|q| v}
+		\]
+		
+		where $q$ is the charge of the particle.\\
+		We can summarize in vector form:
+		\[
+			\vec{F_B} = q \vec{v} \times \vec{B}
+			\tag{8-1}
+		\]
+		with magnitude given by
+		\[
+			F_B = |q| v B \, \sin \phi
+			\tag{8-2}
+		\]
+		where $\phi$ is the angle between the direction of velocity $\vec{v}$ and magnetic field $\vec{B}$. \\
+		The SI unit for $\vec{B}$ is the newton per coulomb-meter per second, which for convenience is called \textbf{tesla} (T):
+		\[
+			1 \, \text{tesla} = 1 \, \text{T} = 1 \, \frac{\text{newton}}{\text{(coulomb)(meter/second)}}
+		\]
+		recalling that a coulomb per second is an ampere:
+		\[
+			1 \, \text{tesla} = 1 \, \frac{\text{N}}{\text{A} \cdot \text{m}}
+		\]
+		
+		
+		
+		\newpage
+		
+		\subsection*{8.2 Magnetic Force on a Particle}
 		
 		
 		
