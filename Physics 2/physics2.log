@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  16 FEB 2025 13:40
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  16 FEB 2025 21:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1372,20 +1372,91 @@ Overfull \hbox (36.80731pt too wide) in paragraph at lines 2265--2266
 [43]
 
 [44]
+File: Physics2_PNGs/electron-positron.png Graphic file (type bmp)
+<Physics2_PNGs/electron-positron.png>
 
-[45] (./physics2.aux)
+Overfull \hbox (45.8686pt too wide) in paragraph at lines 2389--2390
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2397
+
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 2393--2397
+\TU/lmr/m/n/12 The force $[]$ acting on a charged particle moving with velocity
+
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 2393--2397
+[]$ \TU/lmr/m/n/12 through a magnetic field $[]$ is \TU/lmr/m/it/12 always \TU/
+lmr/m/n/12 perpendicular to $[]$ and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2397
+
+ []
+
+File: Physics2_PNGs/magnetic-field-lines.png Graphic file (type bmp)
+<Physics2_PNGs/magnetic-field-lines.png>
+
+Overfull \hbox (36.80731pt too wide) in paragraph at lines 2404--2405
+ [][] 
+ []
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+2417.
+
+File: Physics2_PNGs/electron-vacuum-measure.png Graphic file (type bmp)
+<Physics2_PNGs/electron-vacuum-measure.png>
+
+Overfull \hbox (63.27754pt too wide) in paragraph at lines 2419--2420
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2408--2422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2408--2422
+
+ []
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 24
+22.
+
+File: Physics2_PNGs/hall-effect.png Graphic file (type bmp)
+<Physics2_PNGs/hall-effect.png>
+
+Overfull \hbox (31.00433pt too wide) in paragraph at lines 2440--2441
+ [][] 
+ []
+
+
+
+[45]
+
+[46] (./physics2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 38710 strings out of 475175
- 996779 string characters out of 5757551
- 1622267 words of memory out of 5000000
- 61233 multiletter control sequences out of 15000+600000
+ 38750 strings out of 475175
+ 998313 string characters out of 5757551
+ 1622562 words of memory out of 5000000
+ 61269 multiletter control sequences out of 15000+600000
  575234 words of font info for 120 fonts, out of 8000000 for 9000
  374 hyphenation exceptions out of 8191
  98i,19n,107p,935b,692s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on physics2.pdf (45 pages).
+Output written on physics2.pdf (46 pages).
