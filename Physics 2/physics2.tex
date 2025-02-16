@@ -2238,7 +2238,112 @@
 			\label{fig:RC-circuit-png.png}
 		\end{wrapfigure}
 		Capacitor of capacitance $C$, initially uncharged. To charge it we close switch S on point $a$. This completes an $RC$ \textit{series circuit} consisting of a capacitor, an ideal battery of emf \calE and a resistance $R$. \\
+		The current starts to flow and increases the charges $q$ on the plates and the potential difference $V_C$ ($= q/C$) across the capacitor. When that potential difference equals the battery (which is here equal to emf \calE), the current is \textit{zero}. From $q = CV$ the \textit{equilibrium charge} on the then fully charged capacitor is equal to $C \calE$. \\
+		We want to know how the charge $q(t)$ on the capacitor plates, the potential difference $V_C(t)$ across the capacitor and the current $i(t)$ vary with time. \\
+		We apply loop rule traversing the circuit clockwise from the negative terminal of the battery:
+		\[
+			\calE - iR - \frac{q}{C} = 0
+			\tag{7-15}
+		\]
+		We cannot solve this immediately since $i$ and $q$ are related:
+		\[
+			i = \frac{dq}{dt}
+			\tag{7-16}
+		\]
+		By substituting 7-16 into 7-15:
+		\[
+			R \, \frac{dq}{dt} + \frac{q}{C} = \calE
+			\tag{Charging Equation, 7-17}
+		\]
+		We solve this differential equation for $q$, by applying initial conditions $q = 0$ at $t = 0$ (since the capacitor is uncharged at the beginning). \\
+		The solution is:
+		\[
+			q = C \calE ( 1 - e^{-t/RC})
+			\tag{Charging a Capacitor, 7-18}
+		\]
 		
+		\newpage
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4cm]{Physics2_PNGs/charging-capacitor-graph.png}
+			\caption*{}
+			\label{fig:charging-capacitor-graph.png}
+		\end{wrapfigure}
+		The derivative of $q(t)$ gives us the charging current $i(t)$:
+		\[
+			i = \frac{dq}{dt} = \biggl( \frac{\calE}{R} \biggl) e^{-t/RC}
+			\tag{Charging a Capacitor, 7-19}
+		\]
+		A capacitor that is being charged initially acts like ordinary connecting wire relative to the charging current. A long time later, it acts like a broken wire.
+		\\
+		By combining $q = CV$ and Ec. 7-18 we find that the potential difference $V_C$ across the capacitor is:
+		\[
+			V_C = \frac{q}{C} = \calE (1 - e^{-t/RC} )
+			\tag{Charging a Capacitor, 7-20}
+		\]
+		This tells us that $V_C = 0$ and $t = 0$ and therefore $V_C = \calE$ as the capacitor becomes fully charged at $t \rightarrow \infty$.
+		
+		
+		
+		\subsection*{7.5.2 Capacitive Time constant}
+		
+		We call the product $RC$ \textbf{capacitive time constant} of the circuit and is represented as;
+		\[
+			\tau = RC
+			\tag{Capacitive Time Constant, 7-21}
+		\]
+		At time $t = \tau = RC$ the charge has increased from \textit{zero} to:
+		\[
+			q = C \calE (1 - e^{-1}) = 0.63 \calE
+			\tag{7-22}
+		\]
+		In brief, during the first time constant $\tau$ the charge has increased from \textit{zero} to $63\%$.
+		
+		
+		
+		\subsection*{7.5.3 Discharging a Capacitor}
+		
+		At a time $t = 0$, we throw the switch S from $a$ to $b$. \\
+		The differential equation describing $q(t)$ doesn't involve the battery now, $\calE = 0$. Thus:
+		\[
+			R \, \frac{dq}{dt} + \frac{q}{C} = \calE
+			\tag{Discharging Equation, 7-23}
+		\]
+		This differential equation has solution:
+		\[
+			q = q_0 e^{-t/RC}
+			\tag{Discharging a Capacitor, 7-24}
+		\]
+		or
+		\[
+			V = V_0 e^{-t/RC}
+			\tag{7-25}
+		\]
+		where $q_0 = C V_0$ is the initial charge on the capacitor. \\
+		This tells us that $q$ decreases exponentially with time at a rate $\tau = RC$. \\
+		At time $t = \tau$ the capacitor charge reduces to $q_0 e^{-1}$, or about $37 \%$ of the initial value. \\
+		Differentiating gives us the current $i(t)$:
+		\[
+			i = \frac{dq}{dt} = - \biggl( \frac{q_0}{RC} \biggl) e^{-t/RC}
+			\tag{Discharging a Capacitor, 7-25}
+		\]
+		
+		
+		
+		\newpage
+		
+		\section*{8. Magnetic Fields}
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+	
 	
 	
 
