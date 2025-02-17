@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  17 FEB 2025 17:44
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  17 FEB 2025 21:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1496,21 +1496,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 2629--2633
 
  []
 
+File: Physics2_PNGs/magnetic-dipole-orientation.png Graphic file (type bmp)
+<Physics2_PNGs/magnetic-dipole-orientation.png>
+
+Overfull \hbox (36.80731pt too wide) in paragraph at lines 2644--2645
+ [][] 
+ []
 
 
-[49] (./physics2.aux)
+
+[49]
+
+[50]
+File: Physics2_PNGs/current-wire.png Graphic file (type bmp)
+<Physics2_PNGs/current-wire.png>
+
+Overfull \hbox (79.48643pt too wide) in paragraph at lines 2698--2699
+ [][] 
+ []
+
+File: Physics2_PNGs/magnetic-field-lines-wire.png Graphic file (type bmp)
+<Physics2_PNGs/magnetic-field-lines-wire.png>
+
+Overfull \hbox (41.9724pt too wide) in paragraph at lines 2728--2729
+ [][] 
+ []
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+2748.
+
+File: Physics2_PNGs/magnetic-wire-current-proof.png Graphic file (type bmp)
+<Physics2_PNGs/magnetic-wire-current-proof.png>
+
+Overfull \hbox (65.26007pt too wide) in paragraph at lines 2750--2751
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2746--2753
+
+ []
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 27
+53.
+
+
+
+[51]
+
+[52] (./physics2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 38800 strings out of 475175
- 1000107 string characters out of 5757551
- 1622922 words of memory out of 5000000
- 61314 multiletter control sequences out of 15000+600000
+ 38840 strings out of 475175
+ 1001837 string characters out of 5757551
+ 1623233 words of memory out of 5000000
+ 61350 multiletter control sequences out of 15000+600000
  575234 words of font info for 120 fonts, out of 8000000 for 9000
  374 hyphenation exceptions out of 8191
  98i,19n,107p,935b,692s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on physics2.pdf (49 pages).
+Output written on physics2.pdf (52 pages).

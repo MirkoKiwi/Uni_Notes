@@ -2609,7 +2609,7 @@
 			\centering
 			\includegraphics[width=4cm]{Physics2_PNGs/loop-in-magn-field.png}
 			\caption*{}
-			\label{fig:loop-in-magn-field.png.png}
+			\label{fig:loop-in-magn-field.png}
 		\end{wrapfigure}
 		We take a rectangular loop of sides $a$ and $b$, carrying current $i$ through an uniform magnetic field $\vec{B}$. We place the loop in the field soo that its long sides, that we label as 1 and 3, are perpendicular to the field direction, and its short sides, labeled 2 and 4, aren't. \\
 		We also define the orientation of the loop with a normal vector $\vec{n}$, perpendicular to the plane of the loop. \\
@@ -2639,11 +2639,151 @@
 		
 		\subsection*{8.10 Magnetic Dipole Moment}
 		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4cm]{Physics2_PNGs/magnetic-dipole-orientation.png}
+			\caption*{}
+			\label{fig:magnetic-dipole-orientation.png}
+		\end{wrapfigure}
+		To account for the torque on the coil due to magnetic field, we assign a \textbf{magnetic dipole moment} $\vec{\mu}$ to the coil, with same diretcion as the normal vector $\vec{n}$. The magnitude $|\vec{\mu}|$ is given by:
+		\[
+			\mu = NiA
+			\tag{Magnetic Moment, 8-20}
+		\]
+		in which $N$ is the number of turns in the coil, $i$ is the current and $A$ is the area enclosed by each turn of the coil. \\
+		The unit for $\vec{\mu}$ is the ampere-square meter (A $\cdot$ m$^2$) or (J/T). \\
+		We can rewrite Eq. 8-18 for the torque on the coil due to a magnetic field as:
+		\[
+			\tau = \mu B \sin \theta
+			\tag{8-21}
+		\]
+		in which $\theta$ is the angle between $\vec{\mu}$ and $\vec{B}$.
+		
+		We can generalize in vector form:
+		\[
+			\vec{\tau} = \vec{\mu} \times \vec{B}
+			\tag{8-22} 
+		\]
+		which resembles the torque exerted by an \textit{electric} field on an electric dipole:
+		\[
+			\vec{\tau} = \vec{p} \times \vec{E}
+		\]
+		\\
+		A magnetic dipole in an external magnetic field has an energy that depends on the dipole's orientation in the field:
+		\[
+			U(\theta) = - \vec{\mu} \cdot \vec{E}
+			\tag{Potential Energy due to Magnetic Dipole, 8-23}
+		\]
+		which is, again, similar to the energy for an electric dipole in an electric field
+		\[
+			U(\theta) = - \vec{p} \cdot \vec{E}
+		\]
+		If an external agent rotates a magnetic dipole to an orientation $\theta_i$ to some other orientation $\theta_f$ and the dipole is stationary, the work $W_a$ done on the dipole is:
+		\[
+			W_a = \Delta U = U_f - U_i
+			\tag{8-24}
+		\]
 		
 		
 		
 		
+		\newpage
 		
+		\section*{9. Magnetic Fields due to Currents}
+		
+		\subsection*{9.1 Biot-Savart Law}
+		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=5.5cm]{Physics2_PNGs/current-wire.png}
+			\caption*{}
+			\label{fig:current-wire.png}
+		\end{wrapfigure}
+		Wire of arbitrary shape carrying a current $i$. We want to find the magnetic field $\vec{B}$ at a nearby point $P$. We first divide the wire in differential elements $d\vec{s}$ with same direction as the current. We then define a differential current-length element to be $i \, d\vec{s}$. \\
+		We want to calculate the field $d\vec{B}$ produced at a point $P$ with distance $r$ by a current-length element $i \, d\vec{s}$, which turns out to be:
+		\[
+			dB = \frac{\mu_0}{4 \pi} \, \frac{i \, ds \, \sin \theta}{r^2}
+			\tag{9-1}
+		\]
+		where $\theta$ is the angle between $d\vec{s}$ and $\hat{r}$ (unit vector that points toward $P$ from $ds$). \\
+		$\mu_0$ is a constant, called \textbf{permeability constant of vacuum} whos value is defined to be exactly:
+		\[
+			\mu_0 \, = \, 4 \pi \cdot 10^{-7} \, \text{T} \cdot \text{m} / \text{A}
+			  \, \, \approx \, 1.26 \cdot 10^{-6} \,\,\text{T} \cdot \text{m} / \text{A}
+			\tag{9-2}
+		\]
+		The direction of $d\vec{B}$ is that of the cross product $d\vec{s} \times \hat{r}$. We can therefore write 9-1 in vector form as:
+		\[
+			d\vec{B} = \frac{\mu_0}{4 \pi} \, \frac{i \, d\vec{s} \times \hat{r}}{r^2}
+			\tag{Biot-Savart Law, 9-3}
+		\]
+		Equations 9-1 and 9-3 are known as \textbf{Law of Biot and Savart}, which is an inverse-square law that allows us to calculate the net magnetic field $\vec{B}$ at a point by various distributions of currents.
+		
+		
+		
+		\subsection*{9.2 Magnetic Field Due to a Current in a Long Straight Wire}
+		
+		\begin{wrapfigure}{r}{0.19\textwidth}
+			\centering
+			\includegraphics[width=4.5cm]{Physics2_PNGs/magnetic-field-lines-wire.png}
+			\caption*{}
+			\label{fig:magnetic-field-lines-wire.png}
+		\end{wrapfigure}
+		We use Biot-Savart law to prove that the magnitude of the magnetic field at a \textit{perpendicular} distance $R$ from a long(infinitely) straight wire carrying current $i$ is given by:
+		\[
+			B = \frac{\mu_0 i}{2 \pi R}
+			\tag{Long Straight Wire, 9-4}
+		\]
+		its direction is given by the \textit{right-hand rule}. \\
+		\textit{Right-hand rule}: Grasp the element in your right hand with your extended thumb pointing in the direction of the current. Your fingers will then naturally curl around in the direction of the magnetic field lines due to that element.
+		
+		
+		\subsection*{9.2.1 Proof of Equation 9-4}
+		
+		We know, by Biot Savart law that
+		\[
+			dB = \frac{\mu_0}{4 \pi} \, \frac{i \, ds \, \sin \theta}{r^2}
+		\]
+		the direction of $d\vec{B}$ is always the same as $d\vec{s} \times \hat{r}$. \\
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=5cm]{Physics2_PNGs/magnetic-wire-current-proof.png}
+			\caption*{}
+			\label{fig:magnetic-wire-current-proof.png}
+		\end{wrapfigure}
+		We find the magnitude of the magnetic field at a point $P$, produced by the elements of the infinitely long wire by integrating $dB$ from $-\infty$ to $\infty$.
+		\[
+			B = \int d\vec{B} = \int \frac{\mu_0}{4 \pi r^2} i \, d\vec{s} \times \hat{r} 
+			  = \frac{\mu_0 i}{4 \pi} \int_{-\infty}^{\infty} \frac{\sin \theta \, ds}{r^2}
+			\tag{9-5}
+		\]
+		
+		Variables $\theta$, $s$, and $r$ aren't independent, we can see that they are related by
+		\[
+			r = \sqrt{s^2 + R^2}
+		\]
+		and
+		\[
+			\sin \theta = \sin(\pi - \theta) = \frac{R}{\sqrt{s^2 + R^2}}
+		\]
+		With these substitution into the integral, 9-5 becomes:
+		\[
+			B = \frac{\mu_0 i}{4 \pi R} \int_{-\infty}^{\infty} \frac{R \, ds}{(s^2 + R^2)^{3/2}}
+		       = \frac{\mu_0 i}{4 \pi R} 
+		       \biggl[ \frac{s}{(s^2 + R^2)^{1/2}} \biggl]_{-\infty}^{\infty}
+		       = \frac{\mu_0 i}{2 \pi R}
+		       \tag{9-6}
+		\]
+		As we expected. Therefore
+		\[
+			B = \frac{\mu_0 i}{2 \pi R}
+			\tag{Infinite Straight Wire, 9-7}
+		\]
+		
+		
+		
+		\subsection*{9.3 Magnetic Field Due to a Current in a Circular Arc of Wire}
+		 
 		
 
 	\end{document}
