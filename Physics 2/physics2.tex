@@ -2528,7 +2528,7 @@
 			v_{\perp} = v \, \sin \phi
 			\tag{8-12}
 		\]
-		where the parallel component determines the \textit{pitch} $p$ of the helix, and the perpendicular determines the radius.
+		where the perpendicular determines the \textit{radius} $r$ and the parallel component determines the \textit{pitch} $p$ of the helix.
 		thus
 		\[
 			v_{\perp} \quad \text{determines} \quad r = \frac{mv_{\perp}}{|q| B}
@@ -2545,8 +2545,105 @@
 		
 		\subsection*{8.8 Magnetic Force on a Current-Carrying Wire}
 		
+		\begin{wrapfigure}{r}{0.12\textwidth}
+			\centering
+			\includegraphics[width=3cm]{Physics2_PNGs/wire-section.png}
+			\caption*{}
+			\label{fig:wire-section.png}
+		\end{wrapfigure}
+		As we've seen with the Hall effect, a magnetic field $\vec{B}$ exerts a sideways force on electrons moving in a wire, this force must then be trasmitted to the wire itself (since the conduction electrons can't escape out of the wire). \\
+		When conduction electrons drift with speed $v_d$, they experience a magnetic force $F_B = e v_d B$. \\ We consider a segment of wire of length $L$, we calculate the total charge passing in a time $t = L / v_D$, which is given by
+		\[
+			q = it = i \, \frac{L}{v_d}
+		\]
+		Substituting this into the magnetic force Eq gives
+		\[
+			F_B = q v_d B \, \sin \phi = \frac{iL}{v_d} B \, \sin 90 \text{\textdegree}
+		\]
+		or
+		\[
+			F_B = i L B 
+			\tag{8-13}
+		\]
+		This equation gives the magnetic force that acts on a length $L$ of straight wire
+		carrying a current $i$ and immersed in a uniform magnetic field that is perpendicular to the wire. \\
+		If, instead, the magnetic field is \textit{not} perpendicular to the wire, the magnetic force is given by a generalization in form:
+		\[
+			\vec{F_B} = i \vec{L} \times \vec{B}
+			\tag{Force on a Current, 8-14}
+		\]
+		In which $\vec{L}$ is the \textit{length vector} directed along the wire segment in direction of the current. \\ The magnitude $|\vec{F_B}|$ is
+		\[
+			F_B = i L B \sin \phi
+			\tag{8-15}
+		\]
+		where $\phi$ is the angle between $\vec{L}$ and $\vec{B}$.
+		\\ \\
+		If the wire is not straigh or the field is not uniform, we can imagine to break up the wire into small differential \textit{straight} segments:
+		\[
+			d\vec{F_B} = i d\vec{L} \times \vec{B}
+			\tag{Force on a Current, 8-16}
+		\]
 		
-	
-	
+		
+		
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=5cm]{Physics2_PNGs/magnetic-forces.png}
+			\caption*{}
+			\label{fig:magnetic-forces.png}
+		\end{wrapfigure}
+		
+		\subsection*{8.9 Torque on a Current Loop}
+		
+		
+		Many electric motors use electric forces. \\
+		Considering a simple motor, consisting of a single current-carrying loop immersed in a magnetic field $\vec{B}$.\\ \\
+		The two magnetic forces, $\vec{F}$ and $-\vec{F}$ produce a torque on the loop, tending to rotate it about its central axis. Since they're opposite forces, the net force is \textit{zero}. 
+		\[
+			\vec{F_{net}} = 0 
+		\]
+		
+		\newpage
+		\begin{wrapfigure}{r}{0.17\textwidth}
+			\centering
+			\includegraphics[width=4cm]{Physics2_PNGs/loop-in-magn-field.png}
+			\caption*{}
+			\label{fig:loop-in-magn-field.png.png}
+		\end{wrapfigure}
+		We take a rectangular loop of sides $a$ and $b$, carrying current $i$ through an uniform magnetic field $\vec{B}$. We place the loop in the field soo that its long sides, that we label as 1 and 3, are perpendicular to the field direction, and its short sides, labeled 2 and 4, aren't. \\
+		We also define the orientation of the loop with a normal vector $\vec{n}$, perpendicular to the plane of the loop. \\
+		The forces $\vec{F_4}$, acting on side 4 has same magnitude as $\vec{F_2}$ but opposite direction, therefore they cancel out exactly. \\
+		The situation is different for sides 1 and 3, since the forces $\vec{F_1}$ and $\vec{F_3}$ have common magnitude $iaB$. Having opposite directions, they tend to not move the loop up or down. However they do not share the same line of action, this produces a \textit{net torque}. \\
+		The torque tends to rotate the loop so it align its normal vector $\vec{n}$ to the direction of magnetic field $\vec{B}$. The torque has moment arm $(b/2)\sin \theta$ about the central axis of the loop. The magnitude $\tau'$ given by the forces $\vec{F_1}$ and $\vec{F_3}$ is
+		\[
+			\tau' = \biggl( iaB \frac{b}{2} \sin \theta \biggl) 
+			 		+ \biggl( iaB \frac{b}{2} \sin \theta \biggl)
+			 	  = i a b B \, \sin \theta
+			\tag{8-17}
+		\]
+		If we replace the single loop of current with a \textit{coil} of $N$ loops, or \textit{turns}, we can approssimate (supposing the turns are wound tightly) that they all have same dimansion and lying in a plane. It then becomes a flat coil and the torque is now given by:
+		\[
+			\tau = N \tau' = NiabB \sin \theta = (NiA)B \sin \theta
+			\tag{Torque on a Coil, 8-18}
+		\]
+		in which $A (=ab)$ is the area enclosed by the coil.
+		\\ \\
+		Eq. 8-18 holds for all flat coils, taking for example a circular coil, with radius $r$:
+		\[
+			\tau = (N i \pi r^2)B \sin \theta
+			\tag{Circular coil, 8-19}
+		\]
+		
+		
+		
+		\subsection*{8.10 Magnetic Dipole Moment}
+		
+		
+		
+		
+		
+		
+		
 
 	\end{document}
