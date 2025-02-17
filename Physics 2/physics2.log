@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  17 FEB 2025 02:20
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  17 FEB 2025 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1452,19 +1452,26 @@ Overfull \hbox (31.00433pt too wide) in paragraph at lines 2480--2481
 
 
 
-[46] (./physics2.aux)
+[46]
+File: Physics2_PNGs/helical-path.png Graphic file (type bmp)
+<Physics2_PNGs/helical-path.png>
+
+
+[47]
+
+[48] (./physics2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 38760 strings out of 475175
- 998709 string characters out of 5757551
- 1622636 words of memory out of 5000000
- 61278 multiletter control sequences out of 15000+600000
+ 38770 strings out of 475175
+ 999035 string characters out of 5757551
+ 1622705 words of memory out of 5000000
+ 61287 multiletter control sequences out of 15000+600000
  575234 words of font info for 120 fonts, out of 8000000 for 9000
  374 hyphenation exceptions out of 8191
  98i,19n,107p,935b,692s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on physics2.pdf (46 pages).
+Output written on physics2.pdf (48 pages).

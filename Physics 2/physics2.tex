@@ -2481,9 +2481,71 @@
 			\caption*{}
 			\label{fig:electron-magn-field.png}
 		\end{wrapfigure}
-		A beam of electrons is projected into a chamber by an electron gun G. The electron enter in the plane with speed $v$ and move into a region of uniform magnetic field $\vec{B}$ directed out of the plane. As a result, a magnetic force $\vec{F_B} = q \vec{v} \times \vec{B}$
+		A beam of electrons is projected into a chamber by an electron gun G. The electron enter in the plane with speed $v$ and move into a region of uniform magnetic field $\vec{B}$ directed out of the plane. As a result, a magnetic force $\vec{F_B} = q \vec{v} \times \vec{B}$ continously deflects electrons, and since $\vec{v} \perp \vec{B}$ the electrons follow a circular path. \\
+		We want to determine the parameter that characterize the motion of any particle of charge $|q|$ and mass $m$, movint perpendicular to an uniform magnetic field $\vec{B}$ at speed $v$. \\
+		By applying Newton's second law ($\vec{F} = m \vec{a}$) for circular motion ($F = m(v^2/r)$) at the force, having magnitude $|q|vB$, acting on the particle we have
+		\[
+			|q|vB = \frac{mv^2}{r}
+			\tag{8-7}
+		\]
+		solving for radius $r$:
+		\[
+			r = \frac{mv}{|q|B}
+			\tag{Radius, 8-8}
+		\]
+		The period $T$ (time for one full revolution) is equal to:;
+		\[
+			T = \frac{2 \pi r}{v} = \frac{2 \pi}{v} \, \frac{mv}{|q| B}
+			  = \frac{2 \pi m}{|q| B}
+			\tag{Period, 8-9}
+		\]
+		The frequency $f$(number of revolution per unit time) is
+		\[
+			f = \frac{1}{T} = \frac{|q| B}{2 \pi m}
+			\tag{Frequency, 8-10}
+		\]
+		The angular frequency $\omega$ of the motion is then
+		\[
+			\omega = 2 \pi f = \frac{|q| B}{m}
+			\tag{Angular Frequency, 8-11}
+		\]
+		We also see that the quantities $T$, $f$ and $\omega$ do \textit{not} depend on the speed $v$ of the particle.
+ 		
 		
-	
+		
+		\subsection*{8.7 Helical Paths}
+		
+		\begin{figure}[!b]
+			\centering
+			\includegraphics[width=10cm]{Physics2_PNGs/helical-path.png}
+			\caption*{}
+			\label{fig:helical-path.png}
+		\end{figure}
+		If the velocity of a charged particle has a component parallel to a uniform magnetic field, the particle will move in an helical path about the direction of the field. \\
+		We can resolve the velocity vector $\vec{v}$ of a particle into two component, one parallel to $\vec{B}$ and one perpendicular:
+		\[
+			v_{\parallel} = v \, \cos \phi \quad \text{and} \quad
+			v_{\perp} = v \, \sin \phi
+			\tag{8-12}
+		\]
+		where the parallel component determines the \textit{pitch} $p$ of the helix, and the perpendicular determines the radius.
+		thus
+		\[
+			v_{\perp} \quad \text{determines} \quad r = \frac{mv_{\perp}}{|q| B}
+		\]
+		and 
+		\[
+			v_{\parallel} \quad \text{determines} \quad 
+			p = v_{\parallel} T = v \, \cos \phi \cdot \frac{2 \pi m}{|q| B}
+			   = \frac{2 \pi r}{tan \phi}
+		\]
+		In a \textit{non-uniform} magnetic field the particle might be ``trapped''
+		
+		
+		
+		\subsection*{8.8 Magnetic Force on a Current-Carrying Wire}
+		
+		
 	
 	
 
