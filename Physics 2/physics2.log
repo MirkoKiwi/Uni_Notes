@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  16 FEB 2025 21:57
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.14)  17 FEB 2025 02:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1443,6 +1443,14 @@ Overfull \hbox (31.00433pt too wide) in paragraph at lines 2440--2441
 
 
 [45]
+File: Physics2_PNGs/electron-magn-field.png Graphic file (type bmp)
+<Physics2_PNGs/electron-magn-field.png>
+
+Overfull \hbox (31.00433pt too wide) in paragraph at lines 2480--2481
+ [][] 
+ []
+
+
 
 [46] (./physics2.aux)
  ***********
@@ -1451,10 +1459,10 @@ L3 programming layer <2024-12-25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 38750 strings out of 475175
- 998313 string characters out of 5757551
- 1622562 words of memory out of 5000000
- 61269 multiletter control sequences out of 15000+600000
+ 38760 strings out of 475175
+ 998709 string characters out of 5757551
+ 1622636 words of memory out of 5000000
+ 61278 multiletter control sequences out of 15000+600000
  575234 words of font info for 120 fonts, out of 8000000 for 9000
  374 hyphenation exceptions out of 8191
  98i,19n,107p,935b,692s stack positions out of 10000i,1000n,20000p,200000b,200000s
